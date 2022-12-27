@@ -1,0 +1,42 @@
+#new_release_container{
+    height: 60vh;
+}
+
+#new_release_image{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.play-video-icon{
+    font-size: 50px;
+    color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.movie-short{
+    height: 25vh;
+}
+
+.movie-desc{
+    color: white;
+    bottom: 10px;
+}
+
+.movie-container{
+    height: 300px;
+}
+
+.image-container{
+    height: 200px;
+}
+
+.short-img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    overflow: hidden;
+}

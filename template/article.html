@@ -1,0 +1,218 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{%static './assets/bootstrap-5.2.0-dist/css/bootstrap.min.css'%}">
+    <link rel="stylesheet" href="{%static './assets/style/index.css'%}">
+    <link rel="stylesheet" href="{%static './assets/style/content.css'%}">
+    
+    <title>Wisteria</title>
+</head>
+<body>
+    <!--Nav article-->
+    <nav id="navbar" class="navbar navbar-expand-lg sticky-top">
+        <div class="container pt-2 pb-2 d-lg-flex flex-lg-column">
+            <h1><a class="f-1" href="{%url 'home'%}" style="color: aliceblue; padding-top: 20px; text-decoration: none;" class="hidden">Wisteria</a>
+            </h1>
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-items">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="navbar-items" class="collapse navbar-collapse">
+              <ul class="navbar-nav fs-5 flex-wrap justify-content-lg-center align-items-lg-center">
+                  <li class="nav-item"><a class="nav-link text-light hidden" href="{%url 'home'%}">Home</a></li>
+                  <li class="nav-item"><a class="nav-link text-light hidden" href="{%url 'discover'%}">Discover</a></li>
+                  <li class="nav-item"><a class="active nav-link text-light text-nowrap hidden"
+                          href="{%url 'game'%}">Online
+                          games</a></li>
+                  <li class="nav-item"><a class="nav-link text-light hidden" href="{%url 'movie'%}">Movies</a>
+                  </li>
+                  <li class="nav-item"><a class=" nav-link text-light hidden"
+                          href="{%url 'business'%}">Business</a></li>
+                  <li class="nav-item"><a class="nav-link text-light hidden" href="{%url 'music'%}">Music</a></li>
+                  <li class="nav-item"><a class="nav-link text-light hidden" href="./wallpapers.html">Wallpapers</a>
+                  </li>
+                  <li class="nav-item"><a class="nav-link text-light text-nowrap hidden"
+                          href="{%url 'Todo'%}">To-do-list</a>
+                  </li>
+                  <li class="nav-item"><a class="nav-link text-light text-nowrap hidden"
+                          href="{%url 'community'%}">Community
+                          forum</a></li>
+                  <li class="nav-item"><a class=" nav-link text-light text-nowrap hidden"
+                          href="{%url 'sports'%}">Sport</a></li>
+              </ul>
+          </div>
+          <!--Theme Changer-->
+          <div id="theme-changer-container" class="position-absolute dropdown">
+              <button id="theme-changer-btn" class="btn fs-3 py-1 px-3 dropdown-toggle bi-palette" type="button"
+                  data-bs-toggle="dropdown"> </button>
+              <ul class="dropdown-menu px-1">
+                  <li><a id="light-theme-btn" class="dropdown-item mb-1 rounded" href="#"
+                          onclick="changeTheme('light')">Light</a></li>
+                  <li><a id="dark-theme-btn" class="dropdown-item mb-1 rounded" href="#"
+                          onclick="changeTheme('dark')">Dark</a>
+                  </li>
+                  <li><a id="primary-theme-btn" class="dropdown-item mb-1 rounded" href="#"
+                          onclick="changeTheme('primary')">Primary</a></li>
+                  <li><a id="success-theme-btn" class="dropdown-item mb-1 rounded" href="#"
+                          onclick="changeTheme('success')">Success</a></li>
+                  <li><a id="danger-theme-btn" class="dropdown-item mb-1 rounded" href="#"
+                          onclick="changeTheme('danger')">Danger</a></li>
+              </ul>
+          </div>
+      </div>
+      </div>
+  </nav> 
+
+    <article class="container">
+        <div class="ff_content">
+          <div class="person">
+            <div class="by">
+              <a href="">
+              <!-- <img src="../assets/images/img4.jpg" alt="" /> -->
+              <div class="name">
+                <a href="" style="text-decoration: none; color: #8c5ef3;">
+                <h4>By: <span>Makinde Sodiq</span></h4>
+                <i>{{gamepost.date_created}}</i>
+                </a>
+              </div>
+              
+            </div>
+  
+            <div class="title">
+              <h2>{{gamepost.title}}</h2>
+              <p>3 minutes read:</p>
+  
+              <img src="{{gamepost.article_img.url}}" alt="" style="width: 100%;"/>
+            </div>
+  
+            <div class="content_itself">
+              <p class="main_script">
+               {{gamepost.article_body}}
+            </p>
+
+            <hr>
+  
+              <div class="icon">
+                <div class="width_c">
+                <img src="{%static './assets/images/comment-svgrepo-com.svg'%}" onclick="commentbox()" >
+                </div>
+                <div class="width_c">
+                  <a href="">
+                <img src="{%static './assets/images/share-svgrepo-com.svg'%}" alt="">
+                </a>
+                </div>
+              </div>
+  
+              <form action="" class="comment_sec">
+                <textarea name="" id="" cols="30" rows="10"></textarea>
+                <button type="submit" style="background-color: #8c5ef3;;">Comment</button>
+              </form>
+  
+              <div class="comment">
+                <h2>Comments</h2>
+                <div class="p_person">
+                  <img src="https://cdn-icons-png.flaticon.com/128/456/456212.png" alt="">
+  
+                  <div class="c_name">
+                    <h3>Victor Jordan</h3>
+                   
+                    <p> As they build their dreams, become successful, and gain notoriety, the public, if they see them </p>
+                    <small>30 minutes ago</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <aside>
+
+
+          
+          <a href="">
+         <div class="profile">
+           <img src="https://cdn-icons-png.flaticon.com/128/456/456212.png" alt="">
+           <h2>Fawaz simi</h2>
+           
+         </div>
+         </a>
+         <hr>
+  
+         <div class="related">
+           <h3>Related Post</h3>
+           <div class="rt">
+             <img src="{%static './assets/images/img4.jpg'%}" alt="">
+             <h5><a href="" style="color: black; text-decoration: none;">Life Hack - How to manage your time as a developer</a></h5>
+           </div>
+           <div class="rt">
+             <img src="{%static './assets/images/img8.png'%}" alt="">
+             <h5><a href="" style="color: black; text-decoration: none;">Life Hack - How to manage your time as a developer</a></h5>
+           </div>
+           <div class="rt">
+             <img src="{%static './assets/images/img6.jpg'%}" alt="">
+             <h5><a href="" style="color: black; text-decoration: none;">Life Hack - How to manage your time as a developer</a></h5>
+           </div>
+         </div>
+        </aside>
+      </article>
+  
+   
+  
+ <!--Footer Section-->
+ <footer class="container mb-2 d-flex justify-content-center">
+  <div id="footer-holder">
+    <h3
+      id="foot-desc"
+      class="fs-2 d-flex justify-content-center align-items-center my-4 text-center"
+    >
+      Would you like to join our Community
+    </h3>
+    <form action="" class="d-flex">
+      <input type="text" placeholder="Email Address" class="form-control" />
+      <button
+        id="emailSubmitBtn"
+        class="btn border px-5 py-2 mx-2"
+        type="submit"
+      >
+        Join
+      </button>
+    </form>
+    <p class="foot-desc-text py-3">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum
+      sed nobis accusamus corrupti! Tempora aliquid iure, velit beatae ullam
+      optio molestias consequatur, eius placeat vel quod a quaerat quas
+      praesentium?
+    </p>
+    <hr />
+    <ul class="d-flex flex-row fs-1 justify-content-between">
+      <li>
+        <a href="" class="bi-facebook footer-icon"></a>
+      </li>
+      <li>
+        <a href="" class="bi-twitter footer-icon"></a>
+      </li>
+      <li>
+        <a href="" class="bi-instagram footer-icon"></a>
+      </li>
+      <li>
+        <a href="" class="bi-whatsapp footer-icon"></a>
+      </li>
+      <li>
+        <a href="" class="bi-github footer-icon"></a>
+      </li>
+    </ul>
+
+    <p class="foot-desc-text text-center">&copy; Hope we made your day</p>
+  </div>
+</footer>
+
+
+
+
+
+    <script src="{%static './assets/bootstrap-5.2.0-dist/js/bootstrap.bundle.min.js'%}"></script>
+    <script src="{%static './assets/js/index.js'%}"></script>
+</body>
+</html>

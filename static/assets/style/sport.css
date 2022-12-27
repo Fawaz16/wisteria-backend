@@ -1,0 +1,99 @@
+
+
+
+
+.carousel {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 20px;
+    overflow: hidden;
+  }
+  
+  
+  .carousel h4 {
+    color: #8c5ef3;
+    font-size: 29px;
+    font-weight: bold;
+    padding-left: 30px;
+   padding-top: 30px;
+    
+  }
+  .quote {
+    height: 30px !important;
+    width: 30px !important;
+  }
+  .owl-carousel .owl-item img {
+    display: inline !important;
+  }
+  .owl-dot {
+    width: 25px;
+    height: 25px;
+    background-color: #8c5ef3 !important;
+    margin-right: 10px;
+    border-radius: 50%;
+    transition: 0.5s ease;
+  } 
+  .owl-dots {
+    text-align: center;
+    padding-bottom: 50px;
+  }
+  .owl-dot:hover,
+  .owl-dot.active {
+    background-color: rgb(0, 0, 0) !important;
+  }
+  
+  .cards {
+    background-color: rgb(255, 255, 255) !important;
+    box-shadow: 3px 3px 12px rgb(87, 87, 87);
+    margin-top: 20px;
+    text-align: center;
+    padding: 20px;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    
+  }
+
+.carousel .cards img:hover, .cards img:focus .cards img:active .cards{
+    transform: scale(1.07) !important;
+    transition: 0.3s ease-in-out;
+}
+
+  .a-text h1{
+font-size: 30px;
+text-align: center;
+padding-top: 30px;
+  }
+  
+
+  
+
+  @media(max-width:768px){
+    .a-text h1{
+        font-size: 20px;
+          }
+          .cards{
+              box-shadow: 3px 3px 10px rgb(73, 73, 73) !important;
+          }
+          .cards h3{
+              padding-top: 30px;
+              font-weight: 800;
+          }
+  }
+
+
+
+
+
+  @media(min-width:768px){
+.cards h3{
+    padding-top: 30px;
+}
+  }
+
+
+
+
+  @media(min-width:1024px){
+
+  }
+

@@ -1,0 +1,251 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+    integrity="sha384-xeJqLiuOvjUBq3iGOjvSQSIlwrpqjSHXpduPd6rQpuiM3f5/ijby8pCsnbu5S81n" crossorigin="anonymous">
+    <link rel="stylesheet" href="{%static './assets/bootstrap-5.2.0-dist/css/bootstrap.min.css'%}">
+    <link rel="stylesheet" href="{%static './assets/style/index.css'%}">
+    <link rel="stylesheet" href="{%static './assets/style/online-games.css'%}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <title>Gaming Section</title>
+</head>
+
+<body>
+    <!-- Nav Section -->
+    <nav id="navbar" class="navbar navbar-expand-lg sticky-top">
+        <div class="container position-relative py-2 py-sm-2 py-lg-1 d-lg-flex flex-lg-column">
+            <h1><a class="f-1" href="{%url 'home'%}" style="color: aliceblue; text-decoration: none;"
+                    class="pt-3 hidden">Wisteria</a>
+            </h1>
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-items"
+                onclick="toggleThemeChanger()">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="navbar-items" class="collapse navbar-collapse">
+                <ul class="navbar-nav fs-5 flex-wrap justify-content-lg-center align-items-lg-center">
+                    <li class="nav-item"><a class="nav-link text-light hidden" href="{%url 'home'%}">Home</a></li>
+                    <li class="nav-item"><a class="nav-link text-light hidden" href="{%url 'discover'%}">Discover</a></li>
+                    <li class="nav-item"><a class="active nav-link text-light text-nowrap hidden"
+                            href="{%url 'game'%}">Online
+                            games</a></li>
+                    <li class="nav-item"><a class="nav-link text-light hidden" href="{%url 'movie'%}">Movies</a>
+                    </li>
+                    <li class="nav-item"><a class=" nav-link text-light hidden"
+                            href="{%url 'business'%}">Business</a></li>
+                    <li class="nav-item"><a class="nav-link text-light hidden" href="{%url 'music'%}">Music</a></li>
+                    <li class="nav-item"><a class="nav-link text-light hidden" href="./wallpapers.html">Wallpapers</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link text-light text-nowrap hidden"
+                            href="{%url 'Todo'%}">To-do-list</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link text-light text-nowrap hidden"
+                            href="{%url 'community'%}">Community
+                            forum</a></li>
+                    <li class="nav-item"><a class=" nav-link text-light text-nowrap hidden"
+                            href="{%url 'sports'%}">Sport</a></li>
+                </ul>
+            </div>
+            <!--Theme Changer-->
+            <div id="theme-changer-container" class="position-absolute dropdown">
+                <button id="theme-changer-btn" class="btn fs-3 py-1 px-3 dropdown-toggle bi-palette" type="button"
+                    data-bs-toggle="dropdown"> </button>
+                <ul class="dropdown-menu px-1">
+                    <li><a id="light-theme-btn" class="dropdown-item mb-1 rounded" href="#"
+                            onclick="changeTheme('light')">Light</a></li>
+                    <li><a id="dark-theme-btn" class="dropdown-item mb-1 rounded" href="#"
+                            onclick="changeTheme('dark')">Dark</a>
+                    </li>
+                    <li><a id="primary-theme-btn" class="dropdown-item mb-1 rounded" href="#"
+                            onclick="changeTheme('primary')">Primary</a></li>
+                    <li><a id="success-theme-btn" class="dropdown-item mb-1 rounded" href="#"
+                            onclick="changeTheme('success')">Success</a></li>
+                    <li><a id="danger-theme-btn" class="dropdown-item mb-1 rounded" href="#"
+                            onclick="changeTheme('danger')">Danger</a></li>
+                </ul>
+            </div>
+        </div>
+        </div>
+    </nav> 
+
+    <!--gaming sectionS-->
+    <!-- The gaming section will be divided into three section. (1) The first section is for the images carousel (2) The second section is for the Games list section (3) The third section is for the Related News Feeds-->
+
+    <main class="container">
+        <div class="row gy-2 mt-1">
+            <!--First Section-->
+            <section id="images-carousel-section"
+                class="position-relative col-lg-8 overflow-hidden d-flex justify-content-center align-items-center p-3">
+                <div id="gameImages" class="carousel slide" data-interval="1000" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-slide-to="0" data-bs-target="#gameImages" class="active"></button>
+                        <button type="button" data-bs-slide-to="1" data-bs-target="#gameImages"></button>
+                        <button type="button" data-bs-slide-to="2" data-bs-target="#gameImages"></button>
+                        <button type="button" data-bs-slide-to="3" data-bs-target="#gameImages"></button>
+                        <button type="button" data-bs-slide-to="4" data-bs-target="#gameImages"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active" data-bs-interval="1000">
+                            <img src="https://wallpapercave.com/dwp2x/wp10470404.jpg" class="d-block w-100" />
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://wallpapercave.com/dwp2x/wp10415715.jpg" class="d-block w-100" />
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://wallpapercave.com/wp/wp10519315.jpg" class="d-block w-100" />
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://wallpapercave.com/dwp2x/wp10312622.jpg" class="d-block w-100" />
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://wallpapercave.com/dwp2x/wp10510497.jpg" class="d-block w-100" />
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#gameImages"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#gameImages"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                    <button id="btn-play" class="btn btn-primary px-5 py-2">PLAY NOW</button>
+                </div>
+            </section>
+
+            <!--Second Section-->
+            <section id="game-selections-section" class="col-lg-4 mt-3 p-2 border d-flex flex-column">
+                <h5 class="p-2 my-2 fw-bold">Recommended Games</h5>
+                <article>
+                    {%for android in game %}
+                    <div class="d-flex align-items-center rounded border px-3 py-1">
+                        <img src="{{android.img.url}}" class="game-icon"/>
+                        <span class="d-flex ms-2 align-items-center me-auto">
+                            <span class="ms-1">{{android.game}}</span>
+                            <img src="{%static './assets/images/Vector.png'%}" class="vector-icon align-self-center ms-3 me-1"/>
+                            <img src="{%static './assets/images/Vector.png'%}" class="vector-icon me-1"/>
+                            <img src="{%static './assets/images/Vector.png'%}" class="vector-icon me-1"/>
+                            <img src="{%static './assets/images/Vector.png'%}" class="vector-icon me-1"/>
+                            <img src="{%static './assets/images/Vector.png'%}" class="vector-icon"/>
+                        </span>
+                        <a href="{{android.link}}">
+                        <button class="btn btn-dark px-3 py-1 game-play-btn">PLAY</button>
+                        </a>
+                    </div>
+{%endfor%}
+          
+                </article>
+            </section>
+
+          
+         
+        </div>
+  <!--Third Section-->
+
+  <!-- here i create Pc games to download -->
+<div class="a-text">
+    <h1>Pc games you should download </h1>
+
+{%for pc in pc%}
+    <div class="a1-text">
+        <img src="{{pc.pc_game_img.url}}" alt="">
+        <h3><a href="{{pc.pc_link}}" style="color: black; text-decoration: none;">{{pc.pc_game}}</a></h3>
+       
+    </div>
+{%endfor%}
+    
+    
+</div>
+<!-- game carousel feed -->
+<div class="carousel">
+    <h4>Famous quotations from characters</h4>
+    <div class="bb-text owl-carousel ">
+      <div class="cards"> 
+          <p>" Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis odit esse amet ullam eius nihil placeat in, minus quis, repudiandae accusamus illo " - Franklin( GTA V) </p>
+      </div>
+      <div class="cards">
+          <p>
+              " Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis odit esse amet ullam eius nihil placeat in, minus quis, repudiandae accusamus illo " - mellina( Resident evil)
+          </p>
+      </div>
+      <div class="cards">
+          <p>
+              " Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis odit esse amet ullam eius nihil placeat in, minus quis, repudiandae accusamus illo " - Franklin( GTA V)
+          </p>
+        </div>
+    </div>
+</div>
+
+<!-- Game reads -->
+<div class="e-text">
+    <h1>Game reads</h1>
+</div>
+{%for article in Article|slice:'0:4'%}
+<div class="f-text">
+    <a href="{%url 'article' article.id%}" style="text-decoration: none;">
+    <img src="{{article.article_img.url}}" alt="" loading="lazy">
+    <h1 style="color: black;">{{article.title}}</h1>
+    <p style="color: black;">{{article.article_body|truncatechars:'400'}} </p>
+    <span style="color: black; text-decoration: none;">Date created: <i style="color: #8c5ef3;">{{article.date_created}}</i></span>
+    <a href="{%url 'article' article.id%}">
+    <button>Read more</button>
+    </a>
+    </a> 
+</div>
+
+
+{%endfor%}
+
+<!-- footer section -->
+<footer class="container mb-2 d-flex justify-content-center">
+  <div id="footer-holder">
+      <h3 id="foot-desc" class="fs-2 d-flex justify-content-center align-items-center my-4 text-center">Would you like to
+          join our Community</h3>
+      <form action="" class="d-flex">
+          <input type="text" placeholder="Email Address" class="form-control" />
+          <button id="emailSubmitBtn" class="btn border px-5 py-2 mx-2" type="submit">Join</button>
+      </form>
+      <p class="foot-desc-text py-3">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum
+          sed nobis accusamus corrupti! Tempora aliquid iure, velit beatae
+          ullam optio molestias consequatur, eius placeat vel quod a quaerat
+          quas praesentium?
+      </p>
+      <hr />
+      <ul class="d-flex flex-row fs-1 justify-content-between">
+          <li>
+              <a href="" class="bi-facebook footer-icon"></a>
+          </li>
+          <li>
+              <a href="" class="bi-twitter footer-icon"></a>
+          </li>
+          <li>
+              <a href="" class="bi-instagram footer-icon"></a>
+          </li>
+          <li>
+              <a href="" class="bi-whatsapp footer-icon"></a>
+          </li>
+          <li>
+              <a href="" class="bi-github footer-icon"></a>
+          </li>
+      </ul>
+      <p class="foot-desc-text text-center">&copy; Hope we made your day</p>
+  </div>
+</footer>
+  
+    </main>
+
+    <script src=  "https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="{%static './assets/bootstrap-5.2.0-dist/js/bootstrap.bundle.min.js'%}"></script>
+    <script src="{%static './assets/js/onlinegames.js' %}"></script>
+    <script src="{%static './assets/js/index.js'%}"></script>
+</body>
+
+</html>

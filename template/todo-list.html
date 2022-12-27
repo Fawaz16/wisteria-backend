@@ -1,0 +1,177 @@
+
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+    integrity="sha384-xeJqLiuOvjUBq3iGOjvSQSIlwrpqjSHXpduPd6rQpuiM3f5/ijby8pCsnbu5S81n" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="{%static './assets/bootstrap-5.2.0-dist/css/bootstrap.min.css'%}"
+    />
+    <link rel="stylesheet" href="{%static './assets/style/index.css'%}" />
+    <link rel="stylesheet" href="{%static './assets/style/todo-list.css'%}" />
+    <title>Wisteria - Todo List</title>
+  </head>
+
+  <body>
+    <!--Nav Section-->
+    <nav id="navbar" class="navbar navbar-expand-lg sticky-top">
+      <div class="container position-relative py-2 py-sm-2 py-lg-1 d-lg-flex flex-lg-column">
+          <h1><a class="f-1" href="{%url 'home'%}" style="color: aliceblue; text-decoration: none;"
+                  class="pt-3 hidden">Wisteria</a>
+          </h1>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-items"
+              onclick="toggleThemeChanger()">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div id="navbar-items" class="collapse navbar-collapse">
+              <ul class="navbar-nav fs-5 flex-wrap justify-content-lg-center align-items-lg-center">
+                  <li class="nav-item"><a class="nav-link text-light hidden" href="{%url 'home'%}">Home</a></li>
+                  <li class="nav-item"><a class="nav-link text-light hidden" href="{%url 'discover'%}">Discover</a></li>
+                  <li class="nav-item"><a class="nav-link text-light text-nowrap hidden"
+                          href="{%url 'game'%}">Online
+                          games</a></li>
+                  <li class="nav-item"><a class="nav-link text-light hidden" href="{%url 'movie'%}">Movies</a>
+                  </li>
+                  <li class="nav-item"><a class="nav-link text-light hidden"
+                          href="{%url 'business'%}">Business</a></li>
+                  <li class="nav-item"><a class="nav-link text-light hidden" href="{%url 'music'%}">Music</a></li>
+                  <li class="nav-item"><a class="nav-link text-light hidden" href="./wallpapers.html">Wallpapers</a>
+                  </li>
+                  <li class="nav-item"><a class="active nav-link text-light text-nowrap hidden"
+                          href="{%url 'Todo'%}">To-do-list</a>
+                  </li>
+                  <li class="nav-item"><a class="nav-link text-light text-nowrap hidden"
+                          href="{%url 'community'%}">Community
+                          forum</a></li>
+                  <li class="nav-item"><a class=" nav-link text-light text-nowrap hidden"
+                          href="{%url 'sports'%}">Sport</a></li>
+              </ul>
+          </div>
+          <!--Theme Changer-->
+          <div id="theme-changer-container" class="position-absolute dropdown">
+              <button id="theme-changer-btn" class="btn fs-3 py-1 px-3 dropdown-toggle bi-palette" type="button"
+                  data-bs-toggle="dropdown"> </button>
+              <ul class="dropdown-menu px-1">
+                  <li><a id="light-theme-btn" class="dropdown-item mb-1 rounded" href="#"
+                          onclick="changeTheme('light')">Light</a></li>
+                  <li><a id="dark-theme-btn" class="dropdown-item mb-1 rounded" href="#"
+                          onclick="changeTheme('dark')">Dark</a>
+                  </li>
+                  <li><a id="primary-theme-btn" class="dropdown-item mb-1 rounded" href="#"
+                          onclick="changeTheme('primary')">Primary</a></li>
+                  <li><a id="success-theme-btn" class="dropdown-item mb-1 rounded" href="#"
+                          onclick="changeTheme('success')">Success</a></li>
+                  <li><a id="danger-theme-btn" class="dropdown-item mb-1 rounded" href="#"
+                          onclick="changeTheme('danger')">Danger</a></li>
+              </ul>
+          </div>
+      </div>
+      </div>
+  </nav>
+    <section
+      id="display"
+      class="container position-absolute justify-content-center align-items-center top-50 start-50 translate-middle border w-50 py-5 px-5 justify-content-center flex-column d-flex d-none"
+    >
+      <div class="d-flex flex-column justify-content-center align-items-center">
+        <img src="{%static './assets/images/edit-text.png'%}" class="crud-icon" />
+        <span class="fs-3 text-center">Edit Task</span>
+      </div>
+      <input id="edit-text" type="text" class="form-control my-2 border-dark" />
+      <button id="edit-text-btn" class="btn btn-primary px-5 py-2">Edit</button>
+    </section>
+
+    <main class="container mt-3 justify-content-center">
+      <div id="todo-list-text" class="fs-2 fw-bold text-center">Todo List</div>
+      <section id="form-field" class="d-flex flex-column flex-lg-row">
+        <input
+          type="text"
+          name="todo"
+          id="todo-input-box"
+          class="form-control border-dark py-3 px-3 fs-sm"
+          placeholder="Add a new task"
+          maxlength="50"
+        />
+        <div
+          class="d-flex justify-content-between justify-content-lg-center mt-3 mt-lg-0"
+        >
+          <input
+            type="button"
+            value="Submit"
+            id="submit-btn"
+            class="btn btn-primary ms-2 me-2 fs-sm"
+          />
+          <input
+            type="button"
+            value="Clear List"
+            id="clear-all-btn"
+            class="btn btn-danger fs-sm"
+          />
+        </div>
+      </section>
+      <section id="todo-list-container" class="container py-3 px-0"></section>
+    </main>
+
+    <!--Footer section of todo list container-->
+    <section class="container mb-2 mt-5">
+      <!-- footer section -->
+      <footer class="container mb-2 d-flex justify-content-center">
+        <div id="footer-holder">
+          <h3
+            id="foot-desc"
+            class="fs-2 d-flex justify-content-center align-items-center my-4"
+          >
+            Would you like to join our Community
+          </h3>
+          <form action="" class="d-flex">
+            <input
+              type="text"
+              placeholder="Email Address"
+              class="form-control"
+            />
+            <button
+              id="emailSubmitBtn"
+              class="btn border px-5 py-2 mx-2"
+              type="submit"
+            >
+              Join
+            </button>
+          </form>
+          <p class="foot-desc-text py-3">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum
+            sed nobis accusamus corrupti! Tempora aliquid iure, velit beatae
+            ullam optio molestias consequatur, eius placeat vel quod a quaerat
+            quas praesentium?
+          </p>
+          <hr />
+          <ul class="d-flex flex-row fs-1 justify-content-between">
+            <li>
+              <a href="" class="bi-facebook footer-icon"></a>
+            </li>
+            <li>
+              <a href="" class="bi-twitter footer-icon"></a>
+            </li>
+            <li>
+              <a href="" class="bi-instagram footer-icon"></a>
+            </li>
+            <li>
+              <a href="" class="bi-whatsapp footer-icon"></a>
+            </li>
+            <li>
+              <a href="" class="bi-github footer-icon"></a>
+            </li>
+          </ul>
+          <p class="foot-desc-text text-center">&copy; Hope we made your day</p>
+        </div>
+      </footer>
+    </section>
+
+    <script src="{%static './assets/bootstrap-5.2.0-dist/js/bootstrap.bundle.min.js'%}"></script>
+    <script src="{%static './assets/js/index.js'%}"></script>
+    <script src="{%static './assets/js/todo-list.js'%}"></script>
+  </body>
+</html>

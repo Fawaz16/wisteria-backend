@@ -1,0 +1,830 @@
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+ 
+}
+body{
+    background-color: rgb(255, 255, 255);
+    font-family: 'Poppins', sans-serif; 
+}
+
+
+/* nav styling */
+nav img{
+    width:13%;
+    /* padding: 20px; */
+}
+.first{
+    background: url(Images/r.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 110vh;
+    animation: change 26s ease-in-out infinite;
+ 
+
+    
+}
+nav button{
+    width: 100px;
+ 
+    height: 35px;
+    background-color: #8c5ef3;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+margin-top: 45px;
+margin-right: 30px;
+}
+nav h2{
+    color: red;
+    font-size: 45px;
+}
+nav h1{
+    font-size: 26px;
+    padding-top: 50px;
+    padding-left: 40px;
+    font-family: 'Cedarville Cursive', cursive;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+   
+}
+
+
+/* end of navstyling */
+
+
+/* body1 styling */
+.a-text h1{
+    color: aliceblue;
+   text-align: center;
+    padding-top: 90px;
+    font-size: 50px;
+}
+.a-text p{
+    text-align: center;
+    color: aliceblue;
+    font-size: 23px;
+    padding-top: 20px;
+}
+.a-text span{
+    font-size: 19px;
+}
+.a-text{
+    text-align: center;
+}
+.a-text input{
+    width: 570px;
+    padding: 20px;
+    margin-left: 170px;
+    margin-top: 20px;
+}
+.a-text button{
+    width: 200px;
+    height: 64px;
+    border: none;
+    background-color: #8c5ef3;
+    font-size: 23px;
+    cursor: pointer;
+}
+.a-text button a{
+    color: aliceblue;
+}
+.a-text input{
+    color: aliceblue;
+}
+
+
+
+/* for the animation */
+
+@keyframes change{
+    0%{
+        background: url(https://media.gettyimages.com/photos/general-view-of-the-camp-nou-stadium-prior-to-the-la-liga-match-and-picture-id83644252?k=20&m=83644252&s=612x612&w=0&h=63C3yRhRYwWwfbrJ_IjJ-Pcjf29K3NKSOGLGUf7EKlQ=);
+      background-size: cover;
+      background-position: center;
+    background-repeat: no-repeat;
+    transition: 0.6s ease-in-out;
+    
+  
+    }
+    20%{
+      background: url(images/darksiders__wrath_of_war-1920x1080.jpg);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      transition: 0.6s ease-in-out;
+    }
+    40%{
+      background: url(https://c4.wallpaperflare.com/wallpaper/156/661/289/light-action-fantasy-magic-wallpaper-preview.jpg);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      transition: 0.6s ease-in-out;
+    }
+    60%{
+      background: url(https://media.istockphoto.com/photos/five-stars-review-buisiness-growth-graph-success-picture-id1165394850?b=1&k=20&m=1165394850&s=170667a&w=0&h=SZ5ePaY7NWUoy2msDb6nntLEOndUb6QjSzvyPbC9G-M=);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      transition: 0.6s ease-in-out;
+    }
+    80%{
+      background: url(https://c4.wallpaperflare.com/wallpaper/845/444/23/nature-landscape-oregon-waterfall-wallpaper-preview.jpg);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      transition: 0.6s ease-in-out;
+    }
+    100%{
+      background: url(https://c4.wallpaperflare.com/wallpaper/302/60/973/eminem-computer-wallpaper-preview.jpg);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      transition: 0.6s ease-in-out;
+    }
+  } 
+
+/*  */
+
+
+
+
+
+  /* sign up page stylling*/
+
+  .y2-text h1{
+color: #ffffff;
+font-size: 23px;
+padding: 30px;
+  }
+  .y2-text img{
+      width: 80%;
+  }
+  .y2-text{
+      background-color: #8c5ef3;
+      max-width: 600px;
+      margin-right: 10px;
+      margin-top: 0px;
+      
+      margin: 10 auto;
+  }
+
+
+
+
+
+
+
+  
+  /* end of body1 styling */
+
+@media(max-width:765px){
+    /* mobile responsive styling */
+    /* nav styling */
+    nav img{
+        width: 30%;
+        padding-top: 0px;
+    }
+    .first{
+        height: 80vh;
+        animation: change 25s  infinite ease-in-out;
+    }
+    nav{
+        background-color: rgba(37, 34, 34,0.5);
+        padding-bottom: 20px;
+        
+    }
+    nav button{
+        width: 60px;
+        height: 26px;
+        margin-top: 50px;
+    }
+
+
+
+    /* end of nav styling */
+
+    /* body1 styling */
+    .a-text h1{
+        font-size: 28px;
+    }
+    .a-text p{
+        font-size: 18px;
+        padding: 10px 20px;
+    }
+    .a-text span{
+        font-size: 16px;
+        
+    }
+    
+    .sixth-text h1{
+        font-size: 28px;
+    }
+    .sixth-text p{
+        font-size: 18px;
+        padding: 10px 20px;
+    }
+    .sixth-text span{
+        font-size: 16px;
+        
+    }
+    .a-text input{
+        width: 300px;
+        margin: 0;
+        background-color: rgba(251, 253, 255,0.4);
+        border: 1px solid aliceblue;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        padding: 14px;
+    }
+    .a-text button {
+        width: 120px;
+        font-size: 15px;
+        height: 35px;
+        
+    }
+    /* end of body1 syling */
+
+    /* body2 styling */
+    .second {
+        background-color: rgb(253, 253, 253);
+        padding-top: 40px;
+        padding-left: 0px;
+    }
+    .second h1{
+        color: rgb(0, 0, 0);
+        font-size: 2.125rem;
+        font-weight: 400;
+        text-align: center;
+        padding-bottom: 20px;
+    }
+    .second p{
+        color: rgb(0, 0, 0);
+        font-size: 17px;
+        padding-right: 10px;
+        text-align: center;
+        line-height: 30px;
+        padding-left: 20px;
+    }
+    .second img{
+        width: 100%;
+       padding-top: 20px;
+     object-fit: cover;
+       padding-bottom: 20px;
+        animation-duration: 3s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+    }
+    /* end of body2 styling */
+
+    /* styling for body3 */
+    
+    .third{
+        background-color: rgb(255, 255, 255);
+        padding-top: 40px;
+       
+        padding-bottom: 120px;
+        
+    }
+    .third h1{
+        color: rgb(0, 0, 0);
+        font-size: 2.125rem;
+        font-weight: 400;
+        text-align: center;
+        padding-bottom: 20px;
+    }
+    .third p{
+        color: rgb(0, 0, 0);
+        font-size: 17px;
+        line-height: 30px;
+        padding-left: 20px;
+        padding-right: 20px;
+        text-align: center;
+    }
+    .third img{
+        width: 100%;
+        height: 350px;
+        object-fit: cover;
+        padding-top: 20px;
+  
+        
+    }
+    /* end of styling for body3 */
+
+    /* styling for body4 */
+    .fourth{
+        background-color: rgb(255, 255, 255);
+        color: aliceblue;
+        padding-bottom: 50px;
+        padding-top: 30px;
+
+    }
+    .fourth h1{
+        font-size: 2.120rem;
+        color: black;
+        padding-left: 20px;
+        padding-top: 30px;
+        padding-bottom: 20px;
+    }
+    .fourth p{
+        font-size: 15px;
+        line-height: 30px;
+        padding-left: 20px;
+        color: black;
+    }
+
+    
+    /* end of styling for body4 */
+    @keyframes change{
+        0%{
+            background: url(https://media.gettyimages.com/photos/general-view-of-the-camp-nou-stadium-prior-to-the-la-liga-match-and-picture-id83644252?k=20&m=83644252&s=612x612&w=0&h=63C3yRhRYwWwfbrJ_IjJ-Pcjf29K3NKSOGLGUf7EKlQ=);
+          background-size: cover;
+          background-position: center;
+        background-repeat: no-repeat;
+        transition: 0.6s ease-in-out;
+        
+      
+        }
+        20%{
+          background: url(images/darksiders__wrath_of_war-1920x1080.jpg);
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+          transition: 0.6s ease-in-out;
+        }
+        40%{
+          background: url(https://c4.wallpaperflare.com/wallpaper/156/661/289/light-action-fantasy-magic-wallpaper-preview.jpg);
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+          transition: 0.6s ease-in-out;
+        }
+        60%{
+          background: url(https://media.istockphoto.com/photos/five-stars-review-buisiness-growth-graph-success-picture-id1165394850?b=1&k=20&m=1165394850&s=170667a&w=0&h=SZ5ePaY7NWUoy2msDb6nntLEOndUb6QjSzvyPbC9G-M=);
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+          transition: 0.6s ease-in-out;
+        }
+        80%{
+          background: url(https://c4.wallpaperflare.com/wallpaper/845/444/23/nature-landscape-oregon-waterfall-wallpaper-preview.jpg);
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+          transition: 0.6s ease-in-out;
+        }
+        100%{
+          background: url(https://c4.wallpaperflare.com/wallpaper/302/60/973/eminem-computer-wallpaper-preview.jpg);
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+          transition: 0.6s ease-in-out;
+        }
+      } 
+
+
+      /* main-btb */
+    .main-btb button{
+        width: 50%;
+        padding: 20px;
+        margin-left:20px;
+        margin-bottom: 30px;
+        border: none;
+        cursor: pointer;
+border-radius: 30px;
+        background: transparent;
+        border: 1px solid #8c5ef3;
+
+    }
+    .main-btb a{
+color: rgb(0, 0, 0);
+    }
+    .main-btb button:hover{
+        background-color: aliceblue;
+        color: black;
+        transition: 0.3s ease-in-out;
+        border: 1px solid black;
+    }
+
+
+
+    
+
+
+
+
+  /* sign up styling */
+
+
+
+  .y-text{
+    margin-top: 30px;
+    padding-left: 30px;
+    margin: 0 auto;
+
+    
+}
+.y-text input{
+    width: 90%;
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background: transparent;
+    border:  1px solid #8c5ef3;
+    border-radius: 25px;
+
+}
+
+#special{
+    background-color: #ffffff;
+    padding-bottom: 20px;
+}
+.y-text h1{
+    color: #8c5ef3;
+    padding-bottom: 20px;
+    font-size: 25px;
+    padding-top: 30px;
+}
+
+.y-text form label{
+    color: #8c5ef3;
+}
+.y-text button{
+    width: 80%;
+    margin-top: 30px;
+    padding: 11px;
+    background-color: #8c5ef3;
+    color: aliceblue;
+    border: none;
+    cursor: pointer;
+    border-radius: 15px;
+}
+.y2-text{
+    display: none;
+}
+.x-text p{
+    font-weight: 700;
+    padding-top: 30px;
+    padding-left: 20px;
+}
+
+}
+
+
+@media(min-width:768px){
+    /* styling for ipad */
+
+
+    /* body1 styling */
+    .a-text button{
+        position: relative;
+        left: -20px;
+        bottom: -3px;
+        border: 3px solid #8c5ef3 ;
+    }
+    .first{
+        height: 50vh;
+    }
+    .a-text input{
+        color: gray;
+        font-weight: 900;
+        margin: 0;
+        margin-top: 20px;
+    }
+    
+
+    /* end of body1 */
+
+    /* body2 styling */
+    .second img{
+     width: 40%;
+object-fit: cover;
+     float: right;
+     position: relative;
+ border-radius: 30px;
+     bottom: 190px;
+        
+    }
+    .second {
+        background-color: rgb(255, 255, 255);
+        height: 40px;
+        padding-top: 180px;
+        padding-right: 20px;
+        padding-bottom: 200px;
+        padding-left: 40px;
+    }
+    .second h1{
+        color: rgb(0, 0, 0);
+        font-size: 2.125rem;
+        padding-bottom: 20px;
+    }
+    .second p{
+        color: rgb(0, 0, 0);
+        font-size: 20px;
+        width: 50%;
+    }
+
+
+    /* end of body2 styling */
+
+
+    /* body3 styling */
+    .third img{
+        width: 40%;
+        float: right;
+        height: 300px;
+        border-radius: 30px;
+        position: relative;
+    object-fit: cover;
+        bottom: 190px;
+           
+       }
+        .third {
+           background-color: rgb(255, 255, 255);
+           height: 200px;
+           padding-top: 120px;
+           padding-bottom: 180px;
+           padding-left: 40px;
+           padding-right: 20px;
+           object-fit: cover;
+       }
+       .third h1{
+           color: rgb(0, 0, 0);
+           font-size: 2.125rem;
+           padding-bottom: 20px;
+           width: 50%;
+       }
+       .third p{
+           color: rgb(0, 0, 0);
+           font-size: 23px;
+           width: 50%;
+       } 
+
+    /* end of body3 styling */
+
+    /* body4 styling */
+
+    .fourth{
+        background-color: rgb(255, 255, 255);
+        color: rgb(0, 0, 0);
+        padding-bottom: 50px;
+        padding-top: 30px;
+
+    }
+    .fourth h1{
+        font-size: 2.125rem;
+        padding-left: 40px;
+
+        color: black;
+        padding-top: 30px;
+        padding-bottom: 20px;
+    }
+    .fourth p{
+        font-size: 22px;
+        color: black;
+        padding-left: 40px;
+    }
+     
+    /* end of body4 styling */
+
+    /* main-btb */
+    .main-btb button{
+        width: 20%;
+        padding: 20px;
+        margin-left:50px;
+        margin-bottom: 30px;
+        border: none;
+        cursor: pointer;
+border-radius: 30px;
+        background: transparent;
+        border: 1px solid #8c5ef3;
+
+    }
+    .main-btb a{
+color: rgb(0, 0, 0);
+    }
+    .main-btb button:hover{
+        background-color: aliceblue;
+        color: black;
+        transition: 0.3s ease-in-out;
+
+    }
+
+
+    /* sign up styling */
+
+
+
+  .y-text{
+    max-width: 500px;
+    margin-top: 0px;
+    margin: 0 auto;
+}
+.y-text form label{
+    color: #8c5ef3;
+}
+.y-text input{
+    width: 100%;
+    padding: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background: transparent;
+    border:  1px solid #8c5ef3;
+    border-radius: 25px;
+
+}
+.y-text h1{
+    color: #8c5ef3;
+    padding-bottom: 20px;
+    font-size: 25px;
+    padding-top: 70px;
+}
+.y-text button{
+    width: 100%;
+    padding: 15px;
+    background-color: #8c5ef3;
+    color: aliceblue;
+    border: none;
+    cursor: pointer;
+    border-radius: 15px;
+    margin-bottom: 30px;
+}
+
+.y2-text{
+    display: none;
+}
+.x-text p{
+    font-weight: 700;
+}
+}
+
+@media(min-width:1064px){
+
+    /* styling for screen resolutions 1024px higher */
+
+    .wrapper h1{
+        font-size: 22px;
+    }
+    nav button{
+        margin-top: 50px;
+    }
+    .close{
+        display: none;
+    }
+    .minidiv ul li{
+        font-size: 20px;
+    }
+    .hamburger {
+        display: none;
+    }
+
+    /* styling for body1 */
+    .a-text button{
+       
+        left: -90px;
+top: 3px;
+        border: 3px solid #8c5ef3 ;
+    }
+    .first{
+        height: 90vh;
+    }
+    .a-text input{
+        color: gray;
+        font-weight: 900;
+        margin-left: 170px;
+        margin-top: 20px;
+    }
+
+    /* end of styling for body1 */
+
+
+    /* styling for body2 */
+
+
+
+    .second img{
+        position: relative;
+        width: 40%;
+        bottom: 260px;
+        right: 30px;
+        border-radius: 30px;
+        object-fit: cover;
+
+    }
+    .second {
+        background-color: rgb(255, 255, 255);
+        height: 80px;
+        padding-top: 180px;
+        padding-left: 60px;
+    }
+    .second h1{
+        color: rgb(0, 0, 0);
+        font-size: 3.125rem;
+        padding-bottom: 20px;
+    }
+    .second p{
+        color: rgb(0, 0, 0);
+        font-size: 27px;
+        width: 50%;
+    }
+    /* end of styling for body2 */
+
+
+    /* styling for body3 */
+    .third img{
+        position: relative;
+        width: 30%;
+        float: none;
+        object-fit: cover;
+    overflow: hidden;
+        bottom: 0px;
+        border-radius: 30px;
+        bottom: 230px;
+        right: 10px;
+    }
+    .third {
+        background-color: rgb(255, 255, 255);
+        height: 100px;
+
+        padding-top: 120px;
+        padding-left: 60px;
+        
+    } 
+    .third h1{
+        color: rgb(0, 0, 0);
+        width: 60%;
+        font-size: 3.125rem;
+        padding-bottom: 20px;
+        position: relative;
+        left: 500px;
+
+    }
+    .third p{
+        color: rgb(0, 0, 0);
+        position: relative;
+        left: 500px;
+        font-size: 27px;
+      line-height: 30px;
+        width: 50%;
+    } 
+    /* end of stylling for body3 */
+
+/* stylling for body4 */
+    .fourth h1{
+        font-size: 3.125rem;
+        padding-left: 40px;
+        padding-top: 30px;
+        padding-bottom: 20px;
+    }
+    .fourth p{
+        font-size: 22px;
+        line-height: 40px;
+        padding-left: 40px;
+    }
+    /* end of stylling for body4 */
+
+
+
+    /* main-btb */
+    .main-btb button{
+        width: 20%;
+        padding: 20px;
+        margin-left:50px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        border: none;
+        cursor: pointer;
+
+        background: transparent;
+        border: 1px solid #8c5ef3;
+
+    }
+    .main-btb a{
+color: rgb(0, 0, 0);
+    }
+    
+    .y-text h1{
+        padding-top: 20px;
+    }
+    .over2{
+        display: flex;
+        margin-top: 30px;
+        width: 90%;
+        padding: 0px;
+        border: 2px solid #8c5ef3;
+        margin-left: 40px;
+   
+        justify-content: space-between;
+        margin-bottom: 50px;
+    }
+    .y2-text{
+        display: block;
+    }
+
+}

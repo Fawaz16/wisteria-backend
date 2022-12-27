@@ -1,0 +1,388 @@
+#btn-play{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 40px;
+}
+
+.vector-icon{
+    width: fit-content;
+    height: fit-content;
+}
+
+.game-icon{
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.game-play-btn{
+    right: 15px;
+    top: 10px;
+}
+
+
+/* stylling for the pc games */
+.a-text h1{
+text-align: center;
+padding-top: 30px;
+padding-bottom: 50px;
+}
+
+
+
+
+
+.carousel {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 20px;
+    overflow: hidden;
+  }
+  
+  
+  .carousel h4 {
+    color: #8c5ef3;
+    font-size: 29px;
+    font-weight: bold;
+    padding-left: 30px;
+   padding-top: 30px;
+    text-align: center;
+  }
+  .quote {
+    height: 30px !important;
+    width: 30px !important;
+  }
+  .owl-carousel .owl-item img {
+    display: inline !important;
+  }
+  .owl-dot {
+    width: 25px;
+    height: 25px;
+    background-color: #8c5ef3 !important;
+    margin-right: 10px;
+    border-radius: 50%;
+    transition: 0.5s ease;
+  } 
+  .owl-dots {
+    text-align: center;
+    padding-bottom: 50px;
+  }
+  .owl-dot:hover,
+  .owl-dot.active {
+    background-color: rgb(0, 0, 0) !important;
+  }
+  
+  .cards {
+    background-color: aliceblue;
+    border-top-right-radius: 80px;
+    border-bottom-left-radius: 80px;
+    margin-top: 100px;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 30px;
+    
+  }
+  
+  .e-text h1{
+    text-align: center;
+    color: #8c5ef3;
+  }
+
+
+  .f-text{
+    padding-left: 30px;
+}
+.f-text h1{
+    padding-top: 60px;
+}
+.f-text button{
+    width: 125px;
+    height: 40px;
+    border: none;
+    background:transparent;
+    border: 2px solid #8c5ef3;
+    border-radius: 50px;
+}
+
+
+.g-text{
+  padding-right: 30px;
+}
+.g-text h1{
+  padding-top: 60px;
+}
+.g-text button{
+  width: 125px;
+  height: 40px;
+  border: none;
+  background:transparent;
+  border: 2px solid #8c5ef3;
+  border-radius: 50px;
+}
+
+
+.h-text h1{
+  padding-top: 60px;
+}
+.h-text button{
+  width: 125px;
+  height: 40px;
+  border: none;
+  background:transparent;
+  border: 2px solid #8c5ef3;
+  border-radius: 50px;
+}
+
+
+
+.a1-text{
+    box-shadow: 5px 5px 12px rgb(68, 68, 68);
+    cursor: pointer;
+}
+.a1-text:hover, .a1-text:focus .a1-text:active{
+    transform: scale(1.025);
+}
+/*  */
+
+
+@media(max-width:768px){
+    .a1-text img{
+        width: 40%;
+        object-fit: cover;
+    }
+    .a1-text{
+        display: flex;
+        margin-bottom: 20px;
+    }
+    .a1-text h3{
+        padding-top: 20px;
+        padding-left: 20px;
+    }
+
+
+
+    .f-text img{
+      width: 100%;
+     
+      }
+      .f-text{
+      padding-left: 0px;
+      }
+      .f-text h1{
+          padding-top: 30px;
+          padding-left: 20px;
+      }
+      .f-text p{
+          padding-left: 20px;
+      }
+      .f-text span{
+          padding-left: 20px;
+      }
+      .f-text button{
+          width: 125px;
+          height: 40px;
+          border: none;
+          margin-left: 20px;
+          background:transparent;
+          border: 2px solid #8c5ef3;
+          border-radius: 50px;
+          margin-top: 15px;
+      }  
+
+      .g-text img{
+        width: 100%;
+       
+        }
+        .g-text{
+        padding-right: 0px;
+        margin-top: 20px;
+        }
+        .g-text h1{
+            padding-top: 30px;
+            padding-left: 20px;
+        }
+        .g-text p{
+            padding-left: 20px;
+        }
+        .g-text span{
+            padding-left: 20px;
+        }
+        .g-text button{
+            width: 125px;
+            height: 40px;
+            border: none;
+            margin-left: 20px;
+            background:transparent;
+            border: 2px solid #8c5ef3;
+            border-radius: 50px;
+            margin-top: 15px;
+        }  
+
+        .h-text img{
+          width: 100%;
+         
+          }
+          .h-text{
+          margin-top: 20px;
+          
+          }
+          .h-text h1{
+              padding-top: 30px;
+              padding-left: 20px;
+          }
+          .h-text p{
+              padding-left: 20px;
+          }
+          .h-text span{
+              padding-left: 20px;
+          }
+          .h-text button{
+              width: 125px;
+              height: 40px;
+              border: none;
+              margin-left: 20px;
+              background:transparent;
+              border: 2px solid #8c5ef3;
+              border-radius: 50px;
+              margin-top: 15px;
+          }  
+}
+
+@media(min-width:768px){
+.a1-text img{
+    width: 20%;
+}
+.a1-text{
+    display: flex;
+    margin-bottom: 30px;
+    
+}
+.a1-text h3{
+    padding-top: 20px;
+    padding-left: 20px;
+}
+
+
+.f-text img{
+  width: 60%;
+  float: right;
+  border-radius: 50px;
+  
+  }
+  .f-text{
+      padding-left: 0px;
+      padding-top: 20px;
+  }
+  .f-text h1{
+      padding-top: 60px;
+  }
+  .f-text button{
+      width: 125px;
+      height: 40px;
+      border: none;
+      background:transparent;
+      border: 2px solid #8c5ef3;
+      border-radius: 50px;
+  }
+
+  .g-text img{
+    width: 50%;
+    float: left;
+    border-radius: 50px;
+    padding-right: 20px;
+    }
+    .g-text{
+        padding-right: 0px;
+margin-top: 50px;
+        padding-left: 0px;
+    }
+    .g-text span{
+        padding-left: 10px;
+    }
+    .g-text h1{
+        padding-top: 20px;
+    }
+    .g-text button{
+        width: 125px;
+        height: 40px;
+        border: none;
+        background:transparent;
+        border: 2px solid #8c5ef3;
+        border-radius: 50px;
+    }
+
+    .h-text img{
+      width: 50%;
+      float: right;
+      padding-left: 20px;
+      border-radius: 50px;
+      }
+      .h-text{
+          padding-right: 0px;
+margin-top: 50px;
+          padding-left: 0px;
+      }
+      .h-text h1{
+          padding-top: 20px;
+      }
+      .h-text button{
+          width: 125px;
+          height: 40px;
+          border: none;
+          background:transparent;
+          border: 2px solid #8c5ef3;
+          border-radius: 50px;
+      }
+
+}
+@media(min-width:1024px){
+.a1-text img{
+    width: 30%;
+}
+.a1-text{
+    display: flex;
+}
+.a1-text h3{
+    padding-top: 50px;
+    padding-left: 20px;
+}
+
+.f-text img{
+  width: 50%;
+  float: right;
+  }
+  
+.g-text img{
+  float: left;
+  width: 50%;
+  padding-right: 30px;
+}
+
+      .g-text{
+          margin-top: 200px;
+          padding-left: 30px;
+      }
+      .g-text h3{
+          padding-top: 70px;
+          padding-left: 30px;
+      }
+      .g-text p{
+          padding-left: 30px;
+      }
+      .h-text img{
+        float: right;
+        width: 50%;
+        padding-right: 30px;
+    }
+    
+            .h-text{
+                margin-top: 200px;
+                padding-left: 30px;
+            }
+            .h-text h3{
+                padding-top: 70px;
+                padding-left: 30px;
+            }
+    
+}

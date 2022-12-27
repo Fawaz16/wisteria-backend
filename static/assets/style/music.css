@@ -1,0 +1,92 @@
+
+a{
+    color: rgb(0, 0, 0);
+}
+.b1-text img{
+    width: 100%;
+}
+.b1-text{
+    margin: 20px;
+    text-align: center;
+}
+.b1-text h4{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.b1-text:hover , .b1-text:focus , .b1-text:active{
+    box-shadow: 5px 5px 5px rgb(83, 83, 83);
+    transform: scale(1.05);
+}
+.b1-text{
+    transition: all 0.5s linear;
+    box-shadow: 2px 2px 13px black;
+    padding-bottom: 10px;
+    border-radius: 10px;
+}
+audio{
+padding-bottom: 10px;
+}
+.b1-text button{
+    height: 40px;
+    width: 125px;
+    background-color: #8c5ef3;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+}
+
+
+
+@media(max-width:768px){
+    .a-text h1{
+        font-size: 18px;
+        padding: 20px;
+    
+    }
+    .b1-text{
+        margin-bottom: 30px;
+    }
+}
+
+@media(min-width:768px){
+    .a-text h1{
+        font-size: 20px;
+        padding: 40px 20px;
+    
+    }
+    .b1-text{
+        max-width: 40%;
+        margin-left: 30px;
+    }
+    .b1-text a{
+        color: black;
+    }
+    .b1-text h4{
+        padding-top: 20px;
+    }
+    .b-text{
+        display: flex;
+        flex-wrap: wrap;
+
+    }
+
+
+    
+}
+
+@media(min-width:1024px){
+    .a-text h1{
+        font-size: 30px;
+        padding: 40px 30px;
+    
+    }
+    audio{
+        position: relative;
+        bottom: -20px;
+    }
+    .b-text{
+       margin-left: 40px;
+    }
+    
+}
