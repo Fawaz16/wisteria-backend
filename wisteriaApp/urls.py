@@ -11,6 +11,7 @@ urlpatterns = [
     path('stream/,<int:post_id>',views.stream,name='stream'),
     path('comment/',views.comment,name='comment'),
     path('get_comment/<int:id>',views.get_comment,name='get_comment'),
+    path('get_user/<int:id>',views.get_user,name='get_user'),
     path('games/',views.game,name='game'),
     path('article/<int:post_id>',views.article,name='article'),
     path('music/',views.music,name='music'),

@@ -271,11 +271,20 @@
         url: "{% url 'get_comment' community.id %}",
         success: function (response) {
           $("#display").empty();
+          // console.log(response.comments)
           for (var key in response.comments) {
             // var temp = "<li>" + response.comments[key].body + "</li>";
-            var temp= "<div class='p_person'><div class='c_name'><h3>" +  response.comments[key].owner.username +"</h3><p>" +  response.comments[key].body+"</p>                <small>" +response.comments[key].date_created + "</small></div></div>"
-     
+            $.ajax({
+						type: "GET",
+						url: "{% url 'get_user' response.comments[key].owner_id %}",
+						success: function (response) {
+              var username=response.username	
+						},
+					}
+                    );
+            var temp= "<div class='p_person'><div class='c_name'><h3>" + username +"</h3><p>" +  response.comments[key].body+"</p>                <small>" +response.comments[key].date_created + "</small></div></div>"
             $("#display").append(temp);
+            console.log(response.comments[key])
           }
          
         },

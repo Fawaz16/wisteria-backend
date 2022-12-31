@@ -18,6 +18,7 @@ from django.shortcuts import redirect, render
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
 from django.http import JsonResponse, HttpResponse
+from django.contrib.auth.models import User
 # Create your views here.
 
 def home(request):
@@ -78,6 +79,11 @@ def get_comment(request, id):
     post= Community.objects.get(id=id)
     comments=Comment.objects.filter(post=post)
     return JsonResponse({"comments" : list(comments.values())})
+
+def get_user(request, id):
+    '''get comments'''
+    user= User.objects.get(id=id)
+    return JsonResponse({"user" :user})
 
 
 def game(request):
