@@ -20,6 +20,7 @@ urlpatterns = [
     path('business/',views.business,name='business'),
     path('sports/',views.sports,name='sports'),
     path('Todo/',views.Todo,name='Todo'),
+    path('wallpaper/',views.wallpaper,name='wallpaper'),
     path('sportnews/<int:post_id>',views.sportnews,name='sportnews'),
     path('discovernews/<int:post_id>',views.discovernews,name='discovernews'),
     path('businessnews/<int:post_id>',views.businessnews,name='businessnews'),

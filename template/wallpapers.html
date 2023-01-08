@@ -1,11 +1,13 @@
+{%load static%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../assets/bootstrap-5.2.0-dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../assets/style/index.css">
+    <link rel="stylesheet" href="{%static './assets/bootstrap-5.2.0-dist/css/bootstrap.min.css'%}">
+    <link rel="stylesheet" href="{%static './assets/style/wallpaper.css'%}">
+    <link rel="stylesheet" href="{%static './assets/style/index.css'%}">
     <title>Wisteria</title>
 </head>
 <body>
@@ -65,8 +67,45 @@
         </div>
     </nav>
 
+    <!--Search Section-->
+    <div class="container d-lg-flex flex-lg-row my-lg-5 px-lg-4 mt-3 mb-3">
+        <input class="form-control me-lg-2" type="text" placeholder="Search for wallpaper"/>
+        <button class="btn btn-primary">Search</button>
+    </div>
+
     <!--All Sections-->
     <section class="container mb-2 mt-5">
+        <div class="container-fluid">
+
+
+            <div class="row overflow-hidden gy-2 gx-lg-2 gy-lg-2" id="">
+{%for i in 'uuuuuuuuuuuu'%}
+                <div class="col-12 col-md-6 col-lg-4 overflow-hidden">
+                    <div class="wallpaper-div position-relative">
+                        <img src="{%static './assets/images/img1.jpg'%}" class="wallpaperImg"/>
+                        <div class="content w-100 text-center py-2 text-light">
+                            <span>GTA V</span>
+                        </div>
+                    </div>
+                </div>
+{%endfor%}
+
+               
+            </div>        
+            </div>
+
+                
+      
+                            
+       
+
+    
+
+        <!--Pagination-->
+        <div class="container my-4 p-lg-2 d-flex justify-content-between">
+            <span class="btn btn-primary px-lg-4 mx-lg-2">Prev</span>
+            <span class="btn btn-primary px-lg-4 mx-lg-2" id="next">Next</span>
+        </div>
 
         <!-- footer section -->
         <footer class="container mb-2 d-flex justify-content-center">
@@ -106,7 +145,10 @@
         </footer>
     </section>
 
-    <script src="../assets/bootstrap-5.2.0-dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../assets/js/index.js"></script>
+
+    
+    <script src="{%static './assets/bootstrap-5.2.0-dist/js/bootstrap.bundle.min.js'%}"></script>
+    <script src="{%static './assets/js/wallpaper.js'%}"></script>
+    <script src="{%static './assets/js/index.js'%}"></script>
 </body>
 </html>

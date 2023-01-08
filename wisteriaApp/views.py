@@ -137,6 +137,12 @@ def business(request):
     return render(request, 'business.html' , {'business':business_article})
 
 
+def wallpaper(request):
+    '''render business page'''
+    business_article=Business.objects.all()
+    return render(request, 'wallpapers.html' , {'business':business_article})
+
+
 
 def businessnews(request,post_id):
     ''''render article page'''
