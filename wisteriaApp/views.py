@@ -1,5 +1,4 @@
 from django.shortcuts import render
-import imp
 from pydoc_data.topics import topics
 from .models import Movie
 from .models import Community
