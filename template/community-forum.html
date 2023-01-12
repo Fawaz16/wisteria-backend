@@ -35,7 +35,7 @@
                   <li class="nav-item"><a class=" nav-link text-light hidden"
                           href="{%url 'business'%}">Business</a></li>
                   <li class="nav-item"><a class="nav-link text-light hidden" href="{%url 'music'%}">Music</a></li>
-                  <li class="nav-item"><a class="nav-link text-light hidden" href="./wallpapers.html">Wallpapers</a>
+                  <li class="nav-item"><a class="nav-link text-light hidden" href="{%url 'wallpaper'%}">Wallpapers</a>
                   </li>
                   <li class="nav-item"><a class="nav-link text-light text-nowrap hidden"
                           href="{%url 'Todo'%}">To-do-list</a>
@@ -70,38 +70,43 @@
   </nav>
 
     <article class="container">
-        <div class="ff_content">
+        <div class="ff_content" style="margin-top: 0px;">
           <div class="person">
             <div class="by">
-              <a href="">
-              <!-- <img src="../assets/images/img4.jpg" alt="" /> -->
+              <a href="" style="text-decoration: none; color: #8c5ef3;">
+              <img src="../assets/images/img4.jpg" alt="" />
               <div class="name">
                 <a href="">
-                <h4>By: <span>Makinde Sodiq</span></h4>
-                <i>2 mins ago</i>
+                <!-- <h4>By: <span>Makinde Sodiq</span></h4>
+                <i>2 mins ago</i> -->
                 </a>
               </div>
               
             </div>
   
             <div class="title">
-              <h2>Welcome to community forum.</h2>
-              <p>Here you will be able to view , drop opinions and views, In conjuction with  relative minds.</p>
+              <div class="container fw-bold fs-3  text-center pt-5 " style="color: blueviolet;">
+                {%if user.is_authenticated%}
+                 {{user.username}} welcome to the community forum
+                {%endif%}
+              </div>
+              <hr>
+              <p style="color: black;">Here you will be able to view , drop opinions and views, In conjuction with  relative minds.</p>
   
-              <img src="{%static './assets/images/community1.jpg'%}" alt="" style="width: 100%;"/>
+              <img src="{{community.image.url}}" alt="" style="width: 100%;"/>
             </div>
   
             <div class="content_itself">
-              <p class="main_script">
+              <p class="main_script" style="color: black;">
                  Question of the day: 
                  <p></p>
 
-                 "
+                <span class="display-6" style="color: black;"> "
                 {{community.body}}"
-               
+                </span>
                  <p></p>
                  
-                <p>Drop your views and opinions in the comment article.</p>
+                <p style="color: black;">Drop your views and opinions in the comment article.</p>
               </p>
   
               <hr>
@@ -148,7 +153,7 @@
             </div>
           </div>
         </div>
-        <aside>
+        <!-- <aside>
         
           <a href="">
          <div class="profile">
@@ -174,7 +179,7 @@
              <h5><a href="" style="color: black; text-decoration: none;">Life Hack - How to manage your time as a developer</a></h5>
            </div>
          </div>
-        </aside>
+        </aside> -->
       </article>
 
 
@@ -271,29 +276,33 @@
         url: "{% url 'get_comment' community.id %}",
         success: function (response) {
           $("#display").empty();
-          // console.log(response.comments)
           for (var key in response.comments) {
-            // var temp = "<li>" + response.comments[key].body + "</li>";
-            $.ajax({
-						type: "GET",
-						url: "{% url 'get_user' response.comments[key].owner_id %}",
-						success: function (response) {
-              var username=response.username	
-						},
-					}
-                    );
-            var temp= "<div class='p_person'><div class='c_name'><h3>" + username +"</h3><p>" +  response.comments[key].body+"</p>                <small>" +response.comments[key].date_created + "</small></div></div>"
+            var username = response.comments[key].username;
+            var temp= "<div class='p_person'> <img src='https://cdn-icons-png.flaticon.com/128/456/456212.png' alt=''><div class='c_name'><h3>" + username + "</h3><p>" + response.comments[key].body + "</p><small> "+ response.comments[key].date_created + "</small></div></div>"
             $("#display").append(temp);
-            console.log(response.comments[key])
           }
          
         },
 }
                 ),
-        10000;
+        5000;
     });
   });
 </script>
 
 </body>
 </html>
+
+
+<!-- "<div class='p_person'><div class='c_name'><h3>" + username +"</h3><p>" +  response.comments[key].body+"</p>                <small>" +response.comments[key].date_created + "</small></div></div>"
+
+      "<div class='p_person'>
+                  <img src='https://cdn-icons-png.flaticon.com/128/456/456212.png' alt=''>
+  
+                  <div class='c_name'>
+                    <h3>" + username + "</h3>
+                   
+                    <p>" + response.comments[key].body + "</p>
+                    <small> "+ response.comments[key].date_created + "</small>
+                  </div>
+                </div>" -->

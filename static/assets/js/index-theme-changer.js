@@ -48,16 +48,16 @@ darkBtn.onclick = ()=>{
     footDesc.style.color = "var(--dark-theme-text-color)";
 
     for(let i = 0; i < footDescText.length; i++){
-        footDescText[i].style.color = "var(--dark-theme-text-color)";
+        footDescText[i].style.color = "var(--light-theme-text-color)";
     }
     for(let i = 0; i < footerIcon.length; i++){
-        footerIcon[i].style.color = "var(--dark-theme-header-color)";
+        footerIcon[i].style.color = "var(--light-theme-header-color)";
     }
 
     //Applying changes to all items in the body
     autoTypingText.style.color = "white";
     for(let i = 0; i < descTitle.length; i++){
-        descTitle[i].style.color = "var(--dark-theme-text-color)";
+        descTitle[i].style.color = "var(--light-theme-text-color)";
     }
     for(let i = 0; i < desc.length; i++){
         desc[i].style.color = "var(--dark-theme-text-color)";

@@ -8,13 +8,16 @@
     <link rel="stylesheet" href="{%static './assets/bootstrap-5.2.0-dist/css/bootstrap.min.css'%}">
     <link rel="stylesheet" href="{%static './assets/style/wallpaper.css'%}">
     <link rel="stylesheet" href="{%static './assets/style/index.css'%}">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css" integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e" crossorigin="anonymous">
     <title>Wisteria</title>
 </head>
 <body>
     <!--Nav Section-->
     <nav id="navbar" class="navbar navbar-expand-lg sticky-top">
         <div class="container position-relative py-2 py-sm-2 py-lg-1 d-lg-flex flex-lg-column">
-            <h1><a class="f-1" href="./index.html" style="color: aliceblue; text-decoration: none;"
+            <h1><a class="f-1" href="{%url 'home'%}" style="color: aliceblue; text-decoration: none;"
                     class="pt-3 hidden">Wisteria</a>
             </h1>
             <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-items"
@@ -23,26 +26,26 @@
             </button>
             <div id="navbar-items" class="collapse navbar-collapse">
                 <ul class="navbar-nav fs-5 flex-wrap justify-content-lg-center align-items-lg-center">
-                    <li class="nav-item"><a class="nav-link text-light hidden" href="../index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link text-light hidden" href="./discover.html">Discover</a></li>
+                    <li class="nav-item"><a class="nav-link text-light hidden" href="{%url 'home'%}">Home</a></li>
+                    <li class="nav-item"><a class="nav-link text-light hidden" href="{%url 'discover'%}">Discover</a></li>
                     <li class="nav-item"><a class="nav-link text-light text-nowrap hidden"
-                            href="./online-games.html">Online
+                            href="{%url 'game'%}">Online
                             games</a></li>
-                    <li class="nav-item"><a class="nav-link text-light hidden" href="./online-movies.html">Movies</a>
+                    <li class="nav-item"><a class="nav-link text-light hidden" href="{%url 'movie'%}">Movies</a>
                     </li>
                     <li class="nav-item"><a class="nav-link text-light hidden"
-                            href="./business.html">Business</a></li>
-                    <li class="nav-item"><a class="nav-link text-light hidden" href="./musics.html">Music</a></li>
-                    <li class="nav-item"><a class="active nav-link text-light hidden" href="./wallpapers.html">Wallpapers</a>
+                            href="{%url 'business'%}">Business</a></li>
+                    <li class="nav-item"><a class="nav-link text-light hidden" href="{%url 'music'%}">Music</a></li>
+                    <li class="nav-item"><a class="nav-link text-light hidden" href="{%url 'wallpaper'%}">Wallpapers</a>
+                    </li>
+                    <li class="nav-item"><a class="active nav-link text-light text-nowrap hidden"
+                            href="{%url 'Todo'%}">To-do-list</a>
                     </li>
                     <li class="nav-item"><a class="nav-link text-light text-nowrap hidden"
-                            href="./todo-list.html">To-do-list</a>
-                    </li>
-                    <li class="nav-item"><a class="nav-link text-light text-nowrap hidden"
-                            href="./community-forum.html">Community
+                            href="{%url 'community'%}">Community
                             forum</a></li>
                     <li class="nav-item"><a class=" nav-link text-light text-nowrap hidden"
-                            href="./sport.html">Sport</a></li>
+                            href="{%url 'sports'%}">Sport</a></li>
                 </ul>
             </div>
             <!--Theme Changer-->
@@ -68,44 +71,41 @@
     </nav>
 
     <!--Search Section-->
-    <div class="container d-lg-flex flex-lg-row my-lg-5 px-lg-4 mt-3 mb-3">
+    <div class="container d-lg-flex flex-lg-row my-lg-5 px-lg-4 pt-3 pt-lg-2 overflow-hidden">
         <input class="form-control me-lg-2" type="text" placeholder="Search for wallpaper"/>
         <button class="btn btn-primary">Search</button>
     </div>
 
     <!--All Sections-->
-    <section class="container mb-2 mt-5">
-        <div class="container-fluid">
-
-
-            <div class="row overflow-hidden gy-2 gx-lg-2 gy-lg-2" id="">
-{%for i in 'uuuuuuuuuuuu'%}
-                <div class="col-12 col-md-6 col-lg-4 overflow-hidden">
-                    <div class="wallpaper-div position-relative">
-                        <img src="{%static './assets/images/img1.jpg'%}" class="wallpaperImg"/>
-                        <div class="content w-100 text-center py-2 text-light">
-                            <span>GTA V</span>
-                        </div>
+    <section class="container mb-2 mt-5 gallery">
+        <div class="container-fluid" id="">
+            <div class="row  gy-2 gx-1 gx-lg-1 gy-lg-1 ">
+{%for i  in wallpaper|slice:'0:48'%}
+                <div class="col-6 col-md-3  ">
+                    <div class="wallpaper-div position-relative overflow-hidden rounded w-100">
+                        <a href="{{i.image.url}}"><img src="{{i.image.url}}" class="wallpaperImg w-100"></a>
+                        
                     </div>
                 </div>
-{%endfor%}
 
+
+                {%endfor%}
+                
                
-            </div>        
             </div>
 
-                
-      
-                            
-       
 
-    
+
+
+        
+            
+        </div>
 
         <!--Pagination-->
-        <div class="container my-4 p-lg-2 d-flex justify-content-between">
+        <!-- <div class="container my-4 p-lg-2 d-flex justify-content-between">
             <span class="btn btn-primary px-lg-4 mx-lg-2">Prev</span>
-            <span class="btn btn-primary px-lg-4 mx-lg-2" id="next">Next</span>
-        </div>
+            <span class="btn btn-primary px-lg-4 mx-lg-2" onclick="next(hidden)">Next</span>
+        </div> -->
 
         <!-- footer section -->
         <footer class="container mb-2 d-flex justify-content-center">
@@ -145,10 +145,23 @@
         </footer>
     </section>
 
-
     
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+
+<script>
+  $('.gallery').magnificPopup({
+
+    delegate:'a',
+    type:'image',
+    gallery:{
+      enabled:true 
+    }
+
+  });
+
+</script>
     <script src="{%static './assets/bootstrap-5.2.0-dist/js/bootstrap.bundle.min.js'%}"></script>
-    <script src="{%static './assets/js/wallpaper.js'%}"></script>
     <script src="{%static './assets/js/index.js'%}"></script>
 </body>
 </html>

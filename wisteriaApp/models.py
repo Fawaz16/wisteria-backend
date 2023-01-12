@@ -47,7 +47,7 @@ class Movie(models.Model):
     title=models.CharField(max_length=200)
     body=models.TextField(blank=True)
     link=models.URLField(blank=True)
-    video = models.FileField(upload_to='videos_uploaded',null=True)
+    # video = models.FileField(upload_to='videos_uploaded',null=True)
 
     def __str__(self):
         return f'{self.title[:50]}...'
@@ -61,7 +61,7 @@ class game_article(models.Model):
     article_body=models.TextField(blank=True)
     article_img=models.ImageField(upload_to='blog_image', blank=True)
     date_created=models.DateTimeField(auto_now_add=True)
-    
+    # owner = models.ForeignKey(User, on_delete=models.CASCADE)
 
 
     def __str__(self):
@@ -110,7 +110,7 @@ class Discover_article(models.Model):
     body=models.TextField(blank=True)
     img=models.ImageField(upload_to='blog_image', blank=True)
     date_created=models.DateTimeField(auto_now_add=True)
-
+    # owner = models.ForeignKey(User, on_delete=models.CASCADE)
     def __str__(self):
         return f'{self.title[:50]}...'
     class Meta:
@@ -166,3 +166,13 @@ class Business(models.Model):
         return f'{self.title[:50]}...'
     class Meta:
         ordering = ['-id']
+
+class Wallpapers(models.Model):
+    image=models.ImageField(upload_to='blog_image', blank=True)
+
+
+    class Meta:
+        ordering = ['-id']
+
+class Email(models.Model):
+    email = models.EmailField()

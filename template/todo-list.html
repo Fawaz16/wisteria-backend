@@ -40,7 +40,7 @@
                   <li class="nav-item"><a class="nav-link text-light hidden"
                           href="{%url 'business'%}">Business</a></li>
                   <li class="nav-item"><a class="nav-link text-light hidden" href="{%url 'music'%}">Music</a></li>
-                  <li class="nav-item"><a class="nav-link text-light hidden" href="./wallpapers.html">Wallpapers</a>
+                  <li class="nav-item"><a class="nav-link text-light hidden" href="{%url 'wallpaper'%}">Wallpapers</a>
                   </li>
                   <li class="nav-item"><a class="active nav-link text-light text-nowrap hidden"
                           href="{%url 'Todo'%}">To-do-list</a>
@@ -73,12 +73,18 @@
       </div>
       </div>
   </nav>
+
+  <div class="container fw-bold fs-3  text-center pt-5 " style="color: blueviolet;">
+    {%if user.is_authenticated%}
+     {{user.username}} here  you can make your to-do-list
+    {%endif%}
+  </div>
     <section
       id="display"
       class="container position-absolute justify-content-center align-items-center top-50 start-50 translate-middle border w-50 py-5 px-5 justify-content-center flex-column d-flex d-none"
     >
       <div class="d-flex flex-column justify-content-center align-items-center">
-        <img src="{%static './assets/images/edit-text.png'%}" class="crud-icon" />
+        <img src="{%static './assets/images/edit-text.png' %}" class="crud-icon" />
         <span class="fs-3 text-center">Edit Task</span>
       </div>
       <input id="edit-text" type="text" class="form-control my-2 border-dark" />

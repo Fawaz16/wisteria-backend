@@ -14,11 +14,14 @@ from .models import Did_you_know
 from .models import Quotes
 from .models import sport
 from .models import Business
+from .models import Wallpapers
+from .models import Email
 from django.shortcuts import redirect, render
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
 from django.http import JsonResponse, HttpResponse
 from django.contrib.auth.models import User
+from django import forms
 # Create your views here.
 
 def home(request):
@@ -26,7 +29,7 @@ def home(request):
     return render(request, 'index.html')
 
 
-# @login_required
+@login_required
 def community(request):
     ''''render the community page'''
     community_forum= Community.objects.all()[0]
@@ -65,6 +68,8 @@ def stream(request, post_id):
 def comment(request):
     if request.method == 'POST':
         body=request.POST["message"]
+        if len(body) < 1:
+            return
         owner=request.user
         id=request.POST["hiddenid"]
         id=int(id)
@@ -78,12 +83,12 @@ def get_comment(request, id):
     '''get comments'''
     post= Community.objects.get(id=id)
     comments=Comment.objects.filter(post=post)
-    return JsonResponse({"comments" : list(comments.values())})
-
-def get_user(request, id):
-    '''get comments'''
-    user= User.objects.get(id=id)
-    return JsonResponse({"user" :user})
+    comments = list(comments.values())
+    for comment in comments:
+        id = comment["owner_id"]
+        owner = User.objects.get(id=id).username
+        comment["username"] = owner
+    return JsonResponse({"comments" : comments})
 
 
 def game(request):
@@ -139,8 +144,8 @@ def business(request):
 
 def wallpaper(request):
     '''render business page'''
-    business_article=Business.objects.all()
-    return render(request, 'wallpapers.html' , {'business':business_article})
+    business_article=Wallpapers.objects.all()
+    return render(request, 'wallpapers.html' , {'wallpaper':business_article})
 
 
 
@@ -154,3 +159,24 @@ def businessnews(request,post_id):
 def Todo(request):
     '''render home page'''
     return render(request, 'todo-list.html')
+
+
+
+# class EmailForm(forms.ModelForm):
+#     class Meta:
+#         model = Email
+#         fields = ('email',)
+        
+
+
+# def email_submission(request):
+#     if request.method == 'POST':
+#         form = EmailForm(request.POST)
+#         if form.is_valid():
+#             form.save()
+#             return redirect('success')
+#     else:
+#         form = EmailForm()
+#     return render(request, 'index.html', {'form': form})
+
+

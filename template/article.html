@@ -32,7 +32,7 @@
                   <li class="nav-item"><a class=" nav-link text-light hidden"
                           href="{%url 'business'%}">Business</a></li>
                   <li class="nav-item"><a class="nav-link text-light hidden" href="{%url 'music'%}">Music</a></li>
-                  <li class="nav-item"><a class="nav-link text-light hidden" href="./wallpapers.html">Wallpapers</a>
+                  <li class="nav-item"><a class="nav-link text-light hidden" href="{%url 'wallpaper'%}">Wallpapers</a>
                   </li>
                   <li class="nav-item"><a class="nav-link text-light text-nowrap hidden"
                           href="{%url 'Todo'%}">To-do-list</a>
@@ -74,7 +74,7 @@
               <!-- <img src="../assets/images/img4.jpg" alt="" /> -->
               <div class="name">
                 <a href="" style="text-decoration: none; color: #8c5ef3;">
-                <h4>By: <span>Makinde Sodiq</span></h4>
+         
                 <i>{{gamepost.date_created}}</i>
                 </a>
               </div>
@@ -95,67 +95,7 @@
 
             <hr>
   
-              <div class="icon">
-                <div class="width_c">
-                <img src="{%static './assets/images/comment-svgrepo-com.svg'%}" onclick="commentbox()" >
-                </div>
-                <div class="width_c">
-                  <a href="">
-                <img src="{%static './assets/images/share-svgrepo-com.svg'%}" alt="">
-                </a>
-                </div>
-              </div>
-  
-              <form action="" class="comment_sec">
-                <textarea name="" id="" cols="30" rows="10"></textarea>
-                <button type="submit" style="background-color: #8c5ef3;;">Comment</button>
-              </form>
-  
-              <div class="comment">
-                <h2>Comments</h2>
-                <div class="p_person">
-                  <img src="https://cdn-icons-png.flaticon.com/128/456/456212.png" alt="">
-  
-                  <div class="c_name">
-                    <h3>Victor Jordan</h3>
-                   
-                    <p> As they build their dreams, become successful, and gain notoriety, the public, if they see them </p>
-                    <small>30 minutes ago</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <aside>
-
-
-          
-          <a href="">
-         <div class="profile">
-           <img src="https://cdn-icons-png.flaticon.com/128/456/456212.png" alt="">
-           <h2>Fawaz simi</h2>
-           
-         </div>
-         </a>
-         <hr>
-  
-         <div class="related">
-           <h3>Related Post</h3>
-           <div class="rt">
-             <img src="{%static './assets/images/img4.jpg'%}" alt="">
-             <h5><a href="" style="color: black; text-decoration: none;">Life Hack - How to manage your time as a developer</a></h5>
-           </div>
-           <div class="rt">
-             <img src="{%static './assets/images/img8.png'%}" alt="">
-             <h5><a href="" style="color: black; text-decoration: none;">Life Hack - How to manage your time as a developer</a></h5>
-           </div>
-           <div class="rt">
-             <img src="{%static './assets/images/img6.jpg'%}" alt="">
-             <h5><a href="" style="color: black; text-decoration: none;">Life Hack - How to manage your time as a developer</a></h5>
-           </div>
-         </div>
-        </aside>
+              
       </article>
   
    

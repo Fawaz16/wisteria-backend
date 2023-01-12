@@ -38,7 +38,7 @@
                     <li class="nav-item"><a class=" nav-link text-light hidden"
                             href="{%url 'business'%}">Business</a></li>
                     <li class="nav-item"><a class="nav-link text-light hidden" href="{%url 'music'%}">Music</a></li>
-                    <li class="nav-item"><a class="nav-link text-light hidden" href="./wallpapers.html">Wallpapers</a>
+                    <li class="nav-item"><a class="nav-link text-light hidden" href="{%url 'wallpaper'%}">Wallpapers</a>
                     </li>
                     <li class="nav-item"><a class="nav-link text-light text-nowrap hidden"
                             href="{%url 'Todo'%}">To-do-list</a>
@@ -71,9 +71,14 @@
         </div>
         </div>
     </nav> 
-
+    <div class="container fw-bold fs-3  text-center pt-5 " style="color: blueviolet;">
+        {%if user.is_authenticated%}
+         {{user.username}} here are some games you should check out
+        {%endif%}
+      </div>
     <!--gaming sectionS-->
     <!-- The gaming section will be divided into three section. (1) The first section is for the images carousel (2) The second section is for the Games list section (3) The third section is for the Related News Feeds-->
+
 
     <main class="container">
         <div class="row gy-2 mt-1">
@@ -156,7 +161,6 @@
     <div class="a1-text">
         <img src="{{pc.pc_game_img.url}}" alt="">
         <h3><a href="{{pc.pc_link}}" style="color: black; text-decoration: none;">{{pc.pc_game}}</a></h3>
-       
     </div>
 {%endfor%}
     
@@ -187,10 +191,10 @@
     <h1>Game reads</h1>
 </div>
 {%for article in Article|slice:'0:4'%}
-<div class="f-text">
+<div class="f-text mb-lg-5">
     <a href="{%url 'article' article.id%}" style="text-decoration: none;">
     <img src="{{article.article_img.url}}" alt="" loading="lazy">
-    <h1 style="color: black;">{{article.title}}</h1>
+    <h1 style="color: black;" class="sm-h2">{{article.title}}</h1>
     <p style="color: black;">{{article.article_body|truncatechars:'400'}} </p>
     <span style="color: black; text-decoration: none;">Date created: <i style="color: #8c5ef3;">{{article.date_created}}</i></span>
     <a href="{%url 'article' article.id%}">

@@ -1,3 +1,4 @@
+
 const todoItem = document.querySelector("#todo-input-box");
 const submitBtn = document.querySelector("#submit-btn");
 const clearAllBtn = document.querySelector("#clear-all-btn");
@@ -26,14 +27,14 @@ function createNewElement(todo, state = null) {
     todoItem.value = "";
 
     editBtn.className = "ms-2 flex-shrink-0 btn crud-icon";
-    editBtn.src = "../assets/images/edit.svg";
+    editBtn.src = "http://127.0.0.1:8000/static/assets/images/edit-text.png";
 
     deleteBtn.className = "ms-1 btn flex-shrink-0 btn crud-icon";
-    deleteBtn.src = "../assets/images/delete.svg";
+    deleteBtn.src = "https://user-images.githubusercontent.com/99909801/211973905-d0063b83-01c6-4312-addd-bd059f74c7db.svg";
 
     doneBtn.className = "ms-1 btn flex-shrink-0 crud-icon p-0 m-0";
     doneBtnImg.className = "btn crud-icon border-0 border-0";
-    doneBtnImg.src = "../assets/images/done.svg";
+    doneBtnImg.src = "https://user-images.githubusercontent.com/99909801/211973683-0a7d31c6-5e1c-4e2b-bfe6-2c02ea602023.svg";
 
     if (state != null) {
         doneBtn.disabled = "true";

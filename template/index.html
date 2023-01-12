@@ -167,25 +167,67 @@
     <section
       class="container-fluid text-center my-4 fs-4 d-flex flex-column justify-content-center hidden"
     >
+
+    {%if user.is_authenticated%}
+      <p class="px-5">
+        <!--Automated Typing text-->
+        <span class="">{{user.username}} <span class="auto2"></span></span>
+      </p>
+      {%else%}
       <p class="px-5">
         <!--Automated Typing text-->
         <span class="auto"></span>
       </p>
-      <div class="d-flex justify-content-center mb-1">
+      {%endif%}
+
+
+
+
+
+
+
+
+
+      
+        {%if user.is_authenticated%}
+        <div class="d-flex justify-content-center mb-1"></div>
+        <div class="d-flex justify-content-center mb-1">
+          <button class="btn btn-primary px-5 py-3 me-2 border">
+            <a
+              href="{%url 'login'%}"
+              style="color: aliceblue; text-decoration: none"
+              >Logout</a
+            >
+          </button>
+          <button class="btn btn-danger px-5 py-3 ms-2 border">
+            <a
+              href="{%url 'home'%}"
+              style="color: aliceblue; text-decoration: none"
+              >Lets go</a
+            >
+          </button>
+          {%else%}
         <button class="btn btn-primary px-5 py-3 me-2 border">
           <a
-            href="./pages/login.html"
+            href="{%url 'login'%}"
             style="color: aliceblue; text-decoration: none"
             >Login</a
           >
         </button>
         <button class="btn btn-danger px-5 py-3 ms-2 border">
           <a
-            href="./pages/signup.html"
+            href="{%url 'signup'%}"
             style="color: aliceblue; text-decoration: none"
             >Get started</a
           >
         </button>
+{%endif%}
+      </div>
+
+      <div class="container display-6 fw-bold text-left pt-2 " style="color: blueviolet;">
+        {%if user.is_authenticated%}
+        Welcome {{user.username}}
+        {%endif%}
       </div>
     </section>
 
@@ -601,7 +643,8 @@
           >
             Would you like to join our Community
           </h3>
-          <form action="" class="d-flex">
+          <form action="" class="d-flex" method="post">
+            {% csrf_token %}
             <input
               type="text"
               placeholder="Email Address"
@@ -655,7 +698,17 @@
     <script>
       var typed = new Typed(".auto", {
         strings: [
-          " Welcome to Wisteria , Where we plan on making every day of your exhiliarating. Here are some of the activities you should check out",
+          " Welcome to wisteria , Where we plan on making every day of your exhiliarating. Here are some of the activities you should check out",
+        ],
+        typeSpeed: 50,
+        backSpeed: 50,
+      });
+    </script>
+
+    <script>
+      var typed = new Typed(".auto2", {
+        strings: [
+          " now you have logged in to our site, we recommend you chekout our movie , music, game,wallpaper page to view amazing contents moreso you can read and join discussion on our community forum  ",
         ],
         typeSpeed: 50,
         backSpeed: 50,

@@ -1,6 +1,6 @@
 from telnetlib import GA
 from django.contrib import admin
-from .models import Business, Community ,Comment, Did_you_know, Discover_article, Meme,Movie, Music, PC_game, Quotes, android_game, game_article, sport
+from .models import Business, Community ,Comment, Did_you_know, Discover_article, Meme,Movie, Music, PC_game, Quotes, Wallpapers, android_game, game_article, sport
 
 
 # Register your models here.
@@ -17,3 +17,4 @@ admin.site.register(Quotes),
 admin.site.register(Did_you_know),
 admin.site.register(sport),
 admin.site.register(Business),
+admin.site.register(Wallpapers),
