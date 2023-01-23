@@ -49,7 +49,7 @@ def signup(request):
     return render(request, 'signup.html', {'form': form})
 
 
-
+@login_required
 def movie(request):
         '''render movie page'''
         movies=Movie.objects.all()
@@ -89,7 +89,7 @@ def get_comment(request, id):
         comment["username"] = owner
     return JsonResponse({"comments" : comments})
 
-
+@login_required
 def game(request):
     '''show game content'''
     game=android_game.objects.all()
@@ -102,12 +102,14 @@ def article(request,post_id):
     game_post=game_article.objects.get(id=post_id)
     return render(request, 'article.html', {'gamepost':game_post})
 
+@login_required
 def music(request):
     '''render music page'''
     music=Music.objects.all()
     return render(request,'musics.html', {'music':music})
 
 
+@login_required
 def discover(request):
     '''render discovery page'''
     discovery=Discover_article.objects.all()
@@ -116,7 +118,7 @@ def discover(request):
     did_you_know=Did_you_know.objects.all()
     return render(request, 'discover.html', {'discovery':discovery, 'meme':meme, 'did_you_know':did_you_know, 'quote':quote})
 
-
+@login_required
 def sports(request):
     '''render sport page'''
     sports=sport.objects.all()
@@ -134,13 +136,13 @@ def discovernews(request,post_id):
     discover_news=Discover_article.objects.get(id=post_id)
     return render(request, 'discovernews.html', {'discover_post':discover_news})
 
-
+@login_required
 def business(request):
     '''render business page'''
     business_article=Business.objects.all()
     return render(request, 'business.html' , {'business':business_article})
 
-
+@login_required
 def wallpaper(request):
     '''render business page'''
     business_article=Wallpapers.objects.all()
@@ -154,7 +156,7 @@ def businessnews(request,post_id):
     return render(request, 'businessarticle.html', {'business_post':business_news})
 
 
-
+@login_required
 def Todo(request):
     '''render home page'''
     return render(request, 'todo-list.html')
