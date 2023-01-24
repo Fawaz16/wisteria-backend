@@ -237,7 +237,7 @@ input:valid {
 }
 
 .title {
-  margin-top: 50px;
+  margin-top: 0px;
 }
 
 .title h2 {
@@ -247,7 +247,7 @@ input:valid {
 
 .title p {
   color: #111010c9;
-  margin: 20px auto;
+  margin: 10px auto;
   font-size: 22px;
 }
 

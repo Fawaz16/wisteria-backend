@@ -165,16 +165,16 @@
 
     <!--Welcoming Section-->
     <section
-      class="container-fluid text-center my-4 fs-4 d-flex flex-column justify-content-center hidden"
+      class="container-fluid  my-4 fs-4 d-flex flex-column hidden justify-content-center"
     >
 
     {%if user.is_authenticated%}
-      <p class="px-5">
+      <p class="px-2">
         <!--Automated Typing text-->
         <span class="">{{user.username}} <span class="auto2"></span></span>
       </p>
       {%else%}
-      <p class="px-5">
+      <p class="px-2">
         <!--Automated Typing text-->
         <span class="auto"></span>
       </p>
@@ -242,7 +242,7 @@
 {%endif%}
       </div>
 
-      <div class="container display-6 fw-bold text-left pt-2 " style="color: blueviolet;">
+      <div class="container display-6 fw-bold text-center pt-2 " style="color: blueviolet;">
         {%if user.is_authenticated%}
         Welcome {{user.username}}
         {%endif%}
@@ -272,7 +272,7 @@
             id="carouselGamingSection"
             class="carousel slide"
             data-bs-ride="carousel"
-            data-bs-interval="2700"
+            data-bs-interval="4700"
           >
             <div class="carousel-inner">
               <div class="carousel-item active">
@@ -305,8 +305,7 @@
         <div class="col-12 col-xl-6 position-relative hidden">
           <div class="desc-title fs-2 fw-bold px-xl-4 px-3">Online Games</div>
           <p class="desc text-light px-xl-4 px-3">
-            This site has plethora of online games in it just to make your day
-            exhiliarating. Coupled with this, it also features game reads.
+            Our games section features a huge selection of free online games. We have a wide variety of flash games including action games, shooting and sports games, arcade games and puzzle games. There are also several multiplayer game such as shooter and racing games where you can play against each other
           </p>
           <a href="{%url 'game'%}">
           <button
@@ -320,7 +319,7 @@
             id="carouselGamingSection"
             class="carousel slide"
             data-bs-ride="carousel"
-            data-bs-interval="3000"
+            data-bs-interval="4000"
           >
             <div class="carousel-inner">
               <div class="carousel-item active">
@@ -355,9 +354,7 @@
         <div class="col-12 col-xl-6 position-relative hidden">
           <div class="desc-title fs-2 fw-bold px-xl-4 px-3">Movies</div>
           <p class="desc text-light px-xl-4 px-3">
-            As we aim at giving you the upmost satisfaction,<br />
-            This site has variety of trending and latest movies to watch online
-            for free.
+            Our Movie section is a collection of the best movies from around the world, whether they're in theaters or not. Watch them instantly on your computer, phone or tablet.
           </p>
           <a href="{%url 'movie'%}">
           <button
@@ -371,7 +368,7 @@
             id="carouselGamingSection"
             class="carousel slide"
             data-bs-ride="carousel"
-            data-bs-interval="3500"
+            data-bs-interval="3700"
           >
             <div class="carousel-inner">
               <div class="carousel-item active">
@@ -404,10 +401,7 @@
         <div class="col-12 col-xl-6 position-relative hidden">
           <div class="desc-title fs-2 fw-bold px-xl-4 px-3">Business</div>
           <p class="desc text-light px-xl-4 px-3">
-            This site features a business section where you can read buisiness
-            and catch the latest action on sport news coupled with buisiness
-            ideas. <br />
-            As we aim at giving you a productive day
+            Business news for business people. Our reader-friendly coverage is designed to empower you with actionable insights and opportunities as you work to drive your company's success.
           </p>
           <a href="{%url 'business'%}">
           <button
@@ -421,7 +415,7 @@
             id="carouselGamingSection"
             class="carousel slide"
             data-bs-ride="carousel"
-            data-bs-interval="4000"
+            data-bs-interval="4500"
           >
             <div class="carousel-inner">
               <div class="carousel-item active">
@@ -456,8 +450,7 @@
         <div class="col-12 col-xl-6 position-relative hidden">
           <div class="desc-title fs-2 fw-bold px-xl-4 px-3">Musics</div>
           <p class="desc text-light px-xl-4 px-3">
-            Download latest and trending musics of your choice from your
-            favourite musicians.
+            Our music section is full of songs that you can listen or download. You'll find both contemporary and classic artists, as well as new releases, covers and remixes.
           </p>
           <a href="{%url 'music'%}">
           <button
@@ -471,7 +464,7 @@
             id="carouselGamingSection"
             class="carousel slide"
             data-bs-ride="carousel"
-            data-bs-interval="2000"
+            data-bs-interval="2600"
           >
             <div class="carousel-inner">
               <div class="carousel-item active">
@@ -507,16 +500,14 @@
             class="desc text-light px-xl-4 px-3"
             onclick="goto('./pages/wallpapers.html')"
           >
-            Download and view eye-catching, attractive and colourful
-            wallpapers.This site also comes with a load of funny memes that will
-            surely crack you up.
+          Looking for some fresh wallpapers? Check out our new wallpaper section and find the perfect image to brighten up your device.
           </p>
           <button class="desc-btn mx-xl-4 mx-3">View Now</button>
           <div
             id="carouselGamingSection"
             class="carousel slide"
             data-bs-ride="carousel"
-            data-bs-interval="3000"
+            data-bs-interval="3200"
           >
             <div class="carousel-inner">
               <div class="carousel-item active">
@@ -552,8 +543,7 @@
           <div class="col-12 col-xl-6 position-relative hidden">
             <div class="desc-title fs-2 fw-bold px-xl-4 px-3">To-do-list</div>
             <p class="desc text-light p-2 px-xl-4 px-3">
-              This site has embedded a section where you can be able to make a
-              number of things you plan on achieving.
+              This is a list of everything you need to do. We'll organize your tasks, keep them in order, and remind you when they are due.
             </p>
             <a href="{%url 'Todo'%}">
             <button
@@ -567,7 +557,7 @@
               id="carouselGamingSection"
               class="carousel slide"
               data-bs-ride="carousel"
-              data-bs-interval="2000"
+              data-bs-interval="2500"
             >
               <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -602,10 +592,7 @@
               Community Forum
             </div>
             <p class="desc text-light p-2 px-xl-4 px-3">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Laboriosam debitis quibusdam ipsam error sapiente excepturi hic
-              deleniti corporis illo ab! Adipisci ducimus accusamus ipsum eaque
-              repellendus eum quas error eos?
+              Our community is a place where people can share their ideas with others and discuss everything from politics to recipes. We value civil discourse and encourage you to treat others with respect.
             </p>
             <a href="{%url 'community'%}">
             <button
@@ -619,7 +606,7 @@
               id="carouselGamingSection"
               class="carousel slide"
               data-bs-ride="carousel"
-              data-bs-interval="2000"
+              data-bs-interval="4000"
             >
               <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -677,10 +664,7 @@
             </button>
           </form>
           <p class="foot-desc-text py-3">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum
-            sed nobis accusamus corrupti! Tempora aliquid iure, velit beatae
-            ullam optio molestias consequatur, eius placeat vel quod a quaerat
-            quas praesentium?
+            We're proud to offer a self-service platform that makes it easy for our customers to participate and manage great digital experiences.
           </p>
           <hr />
           <ul class="d-flex flex-row fs-1 justify-content-between">
@@ -716,7 +700,7 @@
     <script>
       var typed = new Typed(".auto", {
         strings: [
-          " Welcome to wisteria , Where we plan on making every day of your exhiliarating. Here are some of the activities you should check out",
+          "Wisteria is an easy to use and fully automated self-service app that allows you to optimize your advertising spend across multiple channels including display, social, video, search and mobile.",
         ],
         typeSpeed: 50,
         backSpeed: 50,

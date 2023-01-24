@@ -58,10 +58,14 @@ class Movie(models.Model):
 
 class game_article(models.Model):
     title=models.CharField(max_length=200 , blank=True)
+    source=models.CharField(max_length=200 , blank=True)
+    source_link=models.URLField(blank=True)
     article_body=models.TextField(blank=True)
+    article_body2=models.TextField(blank=True)
+    article_body3=models.TextField(blank=True)
+    article_body4=models.TextField(blank=True)
     article_img=models.ImageField(upload_to='blog_image', blank=True)
     date_created=models.DateTimeField(auto_now_add=True)
-    # owner = models.ForeignKey(User, on_delete=models.CASCADE)
 
 
     def __str__(self):
@@ -107,7 +111,12 @@ class Music(models.Model):
 
 class Discover_article(models.Model):
     title=models.CharField(max_length=200 , blank=True)
+    source=models.CharField(max_length=200 , blank=True)
+    source_link=models.URLField(blank=True)
     body=models.TextField(blank=True)
+    body2=models.TextField(blank=True)
+    body3=models.TextField(blank=True)
+    body4=models.TextField(blank=True)
     img=models.ImageField(upload_to='blog_image', blank=True)
     date_created=models.DateTimeField(auto_now_add=True)
     # owner = models.ForeignKey(User, on_delete=models.CASCADE)
@@ -120,8 +129,7 @@ class Quotes(models.Model):
     image=models.ImageField(upload_to='blog_image', blank=True)
 
 
-    class Meta:
-        ordering = ['-id']
+    
 
 class Did_you_know(models.Model):
     body=models.TextField(blank=True)
@@ -142,6 +150,11 @@ class Meme(models.Model):
 class sport(models.Model):
     title=models.CharField(max_length=200 , blank=True)
     body=models.TextField(blank=True)
+    body2=models.TextField(blank=True)
+    body3=models.TextField(blank=True)
+    body4=models.TextField(blank=True)
+    source=models.CharField(max_length=200 , blank=True)
+    source_link=models.URLField(blank=True)
     img=models.ImageField(upload_to='blog_image', blank=True)
     date_created=models.DateTimeField(auto_now_add=True)
 
@@ -156,6 +169,11 @@ class sport(models.Model):
 class Business(models.Model):
     title=models.CharField(max_length=200 , blank=True)
     body=models.TextField(blank=True)
+    body2=models.TextField(blank=True)
+    body3=models.TextField(blank=True)
+    body4=models.TextField(blank=True)
+    source=models.CharField(max_length=200 , blank=True)
+    source_link=models.URLField(blank=True)
     img=models.ImageField(upload_to='blog_image', blank=True)
     date_created=models.DateTimeField(auto_now_add=True)
 

@@ -11,7 +11,7 @@
     integrity="sha384-xeJqLiuOvjUBq3iGOjvSQSIlwrpqjSHXpduPd6rQpuiM3f5/ijby8pCsnbu5S81n" crossorigin="anonymous">
     <link rel="stylesheet" href="{%static './assets/bootstrap-5.2.0-dist/css/bootstrap.min.css'%}">
     <link rel="stylesheet" href="{%static './assets/style/index.css'%}">
-    <link rel="stylesheet" href="{%static './assets/style/online-movies.css'%}">
+    <link rel="stylesheet" href="{%static './assets/style/discover.css'%}">
     <title>Wisteria - Business</title>
 
 </head>
@@ -74,107 +74,24 @@
         </div>
     </nav>
  <!--business Section-->
- <div class="container-fluid mt-2">
-    <div class="row overflow-hidden">
-      <div
-        class="col-12 col-lg-8 position-relative"
-        id="new_release_container"
-      >
-      <!--  -->
 
-
-      {%for business in business|slice:'0:1' %}
-        <div class="border h-100">
-          
-          <img src="{{business.img.url}}" id="new_release_image" />
-        </div>
-        <!-- link -->
-        
-    
-        <!-- link -->
-        <div class="position-absolute movie-desc px-2 fs-3" >
-          <a href="{%url 'businessnews' business.id%}" style="text-decoration: none; color: aliceblue;">
-       {{business.body|truncatechars:200}}
-          </a>
-        </div>
-      </div>
-      {%endfor%}
-      <!--  -->
-
-
-
-      <div class="col-12 col-lg-4 d-none d-md-block">
-
-
-        <div
-          class="d-flex flex-column border px-md-2 h-100 justify-content-center mx-1"
-        >
-          <span
-            class="d-block text-center py-2 my-2 border-bottom-2 fw-bold fs-5 text-light bg-dark"
-            >Discover</span
-          >
-          <div class="row overflow-hidden gx-md-2 gy-2 mb-2">
-
-            <!--  -->
-            <div class="col-12 col-sm-6 position-relative">
-
-              <div class="movie-short border">
-                <a href="{%url 'discover'%}">
-                <img src="https://burst.shopifycdn.com/photos/colorful-work-space.jpg?width=746&format=pjpg&exif=1&iptc=1" class="short-img" />
-                </a>
-            
-              </div>
-              
-            </div>
-
-
-            <div class="col-12 col-sm-6 position-relative">
-
-              <div class="movie-short border">
-                <a href="{%url 'discover'%}">
-                <img src="https://burst.shopifycdn.com/photos/colorful-work-space.jpg?width=746&format=pjpg&exif=1&iptc=1" class="short-img" />
-                </a>
-            
-              </div>
-              
-            </div>
-
-            <div class="col-12 col-sm-6 position-relative">
-
-              <div class="movie-short border">
-                <a href="{%url 'discover'%}">
-                <img src="https://burst.shopifycdn.com/photos/colorful-work-space.jpg?width=746&format=pjpg&exif=1&iptc=1" class="short-img" />
-                </a>
-            
-              </div>
-              
-            </div>
-
-            <div class="col-12 col-sm-6 position-relative">
-
-              <div class="movie-short border">
-                <a href="{%url 'discover'%}">
-                <img src="https://burst.shopifycdn.com/photos/colorful-work-space.jpg?width=746&format=pjpg&exif=1&iptc=1" class="short-img" />
-                </a>
-            
-              </div>
-              
-            </div>
-
-            
-            <!--  -->
-
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-    <!-- other reads Section -->
-    <div class="row overflow-hidden my-2 gy-2 gx-md-2 mx-1 mx-sm-2">
-
-<!--  -->
-{%for business in business%}
+ <section class="container">
+  {%for business in business%}
+  <div class="b-text">
+    <a href="{%url 'businessnews' business.id%}" style="text-decoration: none;">
+      <img src="{{business.img.url}}" alt="" loading="lazy">
+      <h1 style="color: black;">{{business.title}}</h1>
+      <p style="color: black;">{{business.body|truncatechars:300}} </p>
+      <span style="color: black; text-decoration: none;">Date created: <i style="color: #8c5ef3;">{{business.date_created}}</i></span>
+      <a href="{%url 'businessnews' business.id%}">
+        <button>Read more</button>
+      </a>
+    </a>
+  </div>
+  <hr>
+{%endfor%}
+ </section>
+<!-- {%for business in business%}
       <div class="col-12 col-md-6 col-lg-4">
 
         <div
@@ -198,14 +115,9 @@
           </a>
         </div>
       </div>
-{%endfor%}
-      <!--  -->
+{%endfor%} -->
+   
 
-      
-
-<!-- end -->
-    </div>
-  </div>
     <!--All Sections-->
     <section class="container mb-2 mt-5">
 
@@ -219,10 +131,7 @@
                     <button id="emailSubmitBtn" class="btn border px-5 py-2 mx-2" type="submit">Join</button>
                 </form>
                 <p class="foot-desc-text py-3">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum
-                    sed nobis accusamus corrupti! Tempora aliquid iure, velit beatae
-                    ullam optio molestias consequatur, eius placeat vel quod a quaerat
-                    quas praesentium?
+                  We're proud to offer a self-service platform that makes it easy for our customers to participate and manage great digital experiences.
                 </p>
                 <hr />
                 <ul class="d-flex flex-row fs-1 justify-content-between">

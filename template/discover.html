@@ -73,7 +73,7 @@
 
 
   <section class="container">
-    {%for discover in discovery%}
+    {%for discover in discovery|slice:'0:5'%}
     <div class="b-text">
       <a href="{%url 'discovernews' discover.id%}" style="text-decoration: none;">
         <img src="{{discover.img.url}}" alt="" loading="lazy">
@@ -85,6 +85,7 @@
         </a>
       </a>
     </div>
+    <hr>
 {%endfor%}
     
 
@@ -92,7 +93,7 @@
     <div class="d-text container">
       <h1>Famous quotations</h1>
       <div class="d1-text">
-        {%for quote in quote%}
+        {%for quote in quote|slice:'0:6'%}
         <img
           src="{{quote.image.url}}"
           alt="" loading="lazy">
@@ -102,11 +103,12 @@
       </div>
     </div>
 
-    <div class="carousel container">
+    <div class="carousel container ">
       <h4>Did you know </h4>
+      <hr>
       <div class="bb-text owl-carousel ">
         {%for did in did_you_know%}
-        <div class="cards">
+        <div class="cards shadow p-5">
 
 
           <p>{{did.body}}
@@ -118,6 +120,7 @@
 
     <div class="d-text">
       <h1>Famous memes</h1>
+      <hr>
       <div class="d1-text">
         {%for image in meme|slice:'0:10'%}
         <img
@@ -152,10 +155,7 @@
           </button>
         </form>
         <p class="foot-desc-text py-3">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum
-          sed nobis accusamus corrupti! Tempora aliquid iure, velit beatae ullam
-          optio molestias consequatur, eius placeat vel quod a quaerat quas
-          praesentium?
+          We're proud to offer a self-service platform that makes it easy for our customers to participate and manage great digital experiences.
         </p>
         <hr />
         <ul class="d-flex flex-row fs-1 justify-content-between">

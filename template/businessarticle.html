@@ -68,9 +68,9 @@
       </div>
   </nav>
 
-    <article class="container">
-        <div class="ff_content">
-            <div class="title">
+    <article class="container ">
+        <div class="ff_content shadow p-3">
+            <div class="title ">
               <h2 style="color: blueviolet;">{{business_post.title}}</h2>
               <hr class="hr">
               <p>3 minutes read:</p>
@@ -78,13 +78,28 @@
               <img src="{{business_post.img.url}}" alt="" style="width: 100%;"/>
             </div>
   
-            <div class="content_itself">
+            <div class="content_itself mb-3">
               <p class="main_script">
                {{business_post.body}}
             </p>
 
+            <div class="content_itself mb-3">
+              <p class="main_script">
+               {{business_post.body2}}
+            </p>
+
+            <div class="content_itself mb-3">
+              <p class="main_script">
+               {{business_post.body3}}
+            </p>
+
+            <div class="content_itself">
+              <p class="main_script">
+               {{business_post.body4}}
+            </p>
+
             <hr>
-  
+  <span>Source: <i><a href="{{business_post.source_link}}">{{business_post.source}}</a></i></span>
               <!-- <div class="icon">
                 <div class="width_c">
                 <img src="{%static './assets/images/comment-svgrepo-com.svg'%}" onclick="commentbox()" >
@@ -128,10 +143,7 @@
       </button>
     </form>
     <p class="foot-desc-text py-3">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum
-      sed nobis accusamus corrupti! Tempora aliquid iure, velit beatae ullam
-      optio molestias consequatur, eius placeat vel quod a quaerat quas
-      praesentium?
+      We're proud to offer a self-service platform that makes it easy for our customers to participate and manage great digital experiences.
     </p>
     <hr />
     <ul class="d-flex flex-row fs-1 justify-content-between">

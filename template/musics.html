@@ -87,8 +87,8 @@
         {%for music in music|slice:'0:10'%}
         <div class="b1-text ">
           <img src="{{music.image.url}}" alt="" />
-          <h4 class="artist-song bg-black text-white" >{{music.title}}</h4>
-          <h4 class="artist-name">{{music.author}}</h4>
+          <h4 class="artist-song bg-black text-white text" >{{music.title}}</h4>
+          <h4 class="artist-name text">{{music.author}}</h4>
           <audio controls preload="metadata">
             <source
               src="{{music.song.url}}"
@@ -97,7 +97,7 @@
           </audio>
 
           <a href="{{music.song.url}}">
-            <button>Download</button>
+            <button class="text">Download</button>
           </a>
         </div>
 {%endfor%}
@@ -130,10 +130,7 @@
             </button>
           </form>
           <p class="foot-desc-text py-3">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum
-            sed nobis accusamus corrupti! Tempora aliquid iure, velit beatae
-            ullam optio molestias consequatur, eius placeat vel quod a quaerat
-            quas praesentium?
+            We're proud to offer a self-service platform that makes it easy for our customers to participate and manage great digital experiences.
           </p>
           <hr />
           <ul class="d-flex flex-row fs-1 justify-content-between">
@@ -176,5 +173,6 @@
     <script src="{%static './assets/bootstrap-5.2.0-dist/js/bootstrap.bundle.min.js'%}"></script>
     <!-- <script src="./../assets/js/music-theme-changer.js"></script> -->
     <script src="{%static './assets/js/index.js'%}"></script>
+    <script src="{%static './assets/js/music-theme-changer.js'%}"></script>
   </body>
 </html>

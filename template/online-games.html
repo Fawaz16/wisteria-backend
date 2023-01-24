@@ -156,9 +156,9 @@
   <!-- here i create Pc games to download -->
 <div class="a-text">
     <h1>Pc games you should download </h1>
-
+<hr>
 {%for pc in pc%}
-    <div class="a1-text">
+    <div class="a1-text shadow">
         <img src="{{pc.pc_game_img.url}}" alt="">
         <h3><a href="{{pc.pc_link}}" style="color: black; text-decoration: none;">{{pc.pc_game}}</a></h3>
     </div>
@@ -169,18 +169,44 @@
 <!-- game carousel feed -->
 <div class="carousel">
     <h4>Famous quotations from characters</h4>
+    <hr>
     <div class="bb-text owl-carousel ">
-      <div class="cards"> 
-          <p>" Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis odit esse amet ullam eius nihil placeat in, minus quis, repudiandae accusamus illo " - Franklin( GTA V) </p>
+      <div class="cards shadow p-3"> 
+          <p>“I’m Commander Shepard, and this is my favorite store on the Citadel!”  – Mass Effect 2 </p>
       </div>
-      <div class="cards">
+      <div class="cards shadow p-3">
           <p>
-              " Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis odit esse amet ullam eius nihil placeat in, minus quis, repudiandae accusamus illo " - mellina( Resident evil)
+            “It’s time to kick ass and chew bubble gum…and I’m all outta gum.” – Duke Nukem
           </p>
       </div>
-      <div class="cards">
+      <div class="cards shadow p-3">
           <p>
-              " Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis odit esse amet ullam eius nihil placeat in, minus quis, repudiandae accusamus illo " - Franklin( GTA V)
+            “What is a man? A Miserable little pile of secrets!” – Castlevania: Symphony of the Night
+          </p>
+        </div>
+      <div class="cards shadow p-3">
+          <p>
+            “We’re not tools of the government or anyone else. Fighting was the only thing I was good at, but at least I always fought for what I believed in.”– Metal Gear Solid
+          </p>
+        </div>
+      <div class="cards shadow p-3">
+          <p>
+            “You were almost a Jill sandwich!” – Resident Evil
+          </p>
+        </div>
+      <div class="cards shadow p-3">
+          <p>
+            “You can’t break a man the way you break a dog or a horse. The harder you beat a man, the taller he stands.” – Far Cry 2
+          </p>
+        </div>
+      <div class="cards shadow p-3">
+          <p>
+            “War…war never changes” – Fallout
+          </p>
+        </div>
+      <div class="cards shadow p-3">
+          <p>
+            “You were almost a Jill sandwich!” – Resident Evil
           </p>
         </div>
     </div>
@@ -189,17 +215,19 @@
 <!-- Game reads -->
 <div class="e-text">
     <h1>Game reads</h1>
+    <hr>
 </div>
 {%for article in Article|slice:'0:4'%}
 <div class="f-text mb-lg-5">
     <a href="{%url 'article' article.id%}" style="text-decoration: none;">
-    <img src="{{article.article_img.url}}" alt="" loading="lazy">
+    <img src="{{article.article_img.url}}" alt="" loading="lazy" >
     <h1 style="color: black;" class="sm-h2">{{article.title}}</h1>
     <p style="color: black;">{{article.article_body|truncatechars:'400'}} </p>
     <span style="color: black; text-decoration: none;">Date created: <i style="color: #8c5ef3;">{{article.date_created}}</i></span>
     <a href="{%url 'article' article.id%}">
     <button>Read more</button>
     </a>
+    <hr>
     </a> 
 </div>
 
@@ -216,10 +244,7 @@
           <button id="emailSubmitBtn" class="btn border px-5 py-2 mx-2" type="submit">Join</button>
       </form>
       <p class="foot-desc-text py-3">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum
-          sed nobis accusamus corrupti! Tempora aliquid iure, velit beatae
-          ullam optio molestias consequatur, eius placeat vel quod a quaerat
-          quas praesentium?
+        We're proud to offer a self-service platform that makes it easy for our customers to participate and manage great digital experiences.
       </p>
       <hr />
       <ul class="d-flex flex-row fs-1 justify-content-between">
