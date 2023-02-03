@@ -1,3 +1,4 @@
+from email import message
 from django.shortcuts import render
 from pydoc_data.topics import topics
 from .models import Movie
@@ -15,11 +16,14 @@ from .models import sport
 from .models import Business
 from .models import Wallpapers
 from .models import Email
+from django.conf import settings
 from django.shortcuts import redirect, render
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
 from django.http import JsonResponse, HttpResponse
 from django.contrib.auth.models import User
+from django.core.mail import EmailMessage
+# from .email import send_welcome_email
 from django import forms
 # Create your views here.
 
@@ -40,9 +44,21 @@ def signup(request):
     '''render signup page'''
     if request.method =='POST':
         form = UserCreationForm(request.POST)
-        if form.is_valid():
+        if form.is_valid():   
+            username=request.POST['username']   
+            email=request.POST['email']   
+            subject='Welcome to wisteria'
+            message=f'Hi {username} welcome to wisteria where we will make your day more exciting'
+
+            from_email = settings.EMAIL_HOST_USER
+            receipient_list=[email]
+            
+            # email​=​​EmailMessage​(​subject​=​email_subject​,​body​=​email_body​, ​from_email​=​ ​fawazrufai5@gmail.com​,​to​=​ email),fail_silently=False)
+            email=EmailMessage(subject=subject,body=message,from_email=from_email, to=receipient_list)
+            email.send()
             form.save()
-            return redirect('login')
+           
+            return redirect('login')     
     else:
         form= UserCreationForm()
 

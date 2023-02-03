@@ -24,7 +24,6 @@ class Community(models.Model):
         ordering = ['-id']
 
 
-
 class Comment(models.Model):
     post = models.ForeignKey(Community,on_delete=models.CASCADE)
     body=models.TextField(blank=True)

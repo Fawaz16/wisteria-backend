@@ -13,6 +13,7 @@ import os
 from pathlib import Path
 from telnetlib import LOGOUT
 
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -41,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    'django.core.mail',
     'django.contrib.staticfiles',
       # my apps
     'wisteriaApp.apps.WisteriaappConfig'
@@ -127,6 +129,29 @@ STATICFILES_DIRS=['static/']
 STATIC_ROOT = os.path.join(BASE_DIR, '/static/')
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+
+#Email settings
+
+
+# SENGRID_API_KEY=os.environ.get('SENGRID_API_KEY', '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')
+# SENDGRID_SANDBOX_MODE_IN_DEBUG='False'
+# EMAIL_BACKEND = 'sgbackend.SendGridBackend'
+
+
+import socket
+socket.getaddrinfo('localhost', 127)
+
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_SERVER='wisteria043@gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'wisteria043@gmail.com'
+EMAIL_HOST_PASSWORD = 'szjlaculblspehtr'
+EMAIL_USE_TLS = True
+# EMAIL_USE_SSL =False
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
