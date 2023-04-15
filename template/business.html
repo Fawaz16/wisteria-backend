@@ -7,6 +7,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
     integrity="sha384-xeJqLiuOvjUBq3iGOjvSQSIlwrpqjSHXpduPd6rQpuiM3f5/ijby8pCsnbu5S81n" crossorigin="anonymous">
     <link rel="stylesheet" href="{%static './assets/bootstrap-5.2.0-dist/css/bootstrap.min.css'%}">
@@ -17,7 +19,9 @@
 </head>
 
 <body>
-
+  <div class="preloader">
+    <div class="spinner"></div>
+  </div>
     <!--Nav Section-->
     <nav id="navbar" class="navbar navbar-expand-lg sticky-top">
         <div class="container position-relative py-2 py-sm-2 py-lg-1 d-lg-flex flex-lg-column">
@@ -35,8 +39,8 @@
                     <li class="nav-item"><a class="nav-link text-light text-nowrap hidden"
                             href="{%url 'game'%}">Online
                             games</a></li>
-                    <li class="nav-item"><a class="nav-link text-light hidden" href="{%url 'movie'%}">Movies</a>
-                    </li>
+ 
+              
                     <li class="nav-item"><a class=" active nav-link text-light hidden"
                             href="{%url 'business'%}">Business</a></li>
                     <li class="nav-item"><a class="nav-link text-light hidden" href="{%url 'music'%}">Music</a></li>
@@ -155,7 +159,12 @@
             </div>
         </footer>
     </section>
-
+    <script>
+      $(window).on('load', function() {
+        // Hide the preloader once the page has finished loading
+        $('.preloader').fadeOut('slow');
+      });
+    </script>
     <script src="{%static './assets/bootstrap-5.2.0-dist/js/bootstrap.bundle.min.js'%}"></script>
     <script src="{%static './assets/js/index.js'%}"></script>
 </body>
