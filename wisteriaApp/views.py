@@ -196,4 +196,3 @@ def Todo(request):
 #         form = EmailForm()
 #     return render(request, 'index.html', {'form': form})
 
-
